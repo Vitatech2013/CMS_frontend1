@@ -1,0 +1,56 @@
+<div class="container-fluid p-0 sticky-top">
+  <nav class="navbar">
+    <button
+    type="button"
+    color="primary"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <a routerLink="/home"><img class="logo" src="/assets/images/bitslogo.jpg" alt="logo"></a>
+  <span style="font-size:2rem;color: #fff;font-family: initial;">BITS</span>
+  <button class="btn btn-primary" (click)="logout()">Logout</button>
+  </nav>
+</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-nav-list>
+          <a mat-list-item class="links" routerLink="admin-home" routerLinkActive="active"><span class="material-symbols-outlined">grid_view</span> &nbsp; Home</a>
+          <a mat-list-item class="links" [matMenuTriggerFor]="belowMenu">
+              <span class="material-symbols-outlined">person</span>&nbsp; Officers<span class="material-symbols-outlined right">navigate_next</span></a>
+              <mat-menu #belowMenu="matMenu" yPosition="below">
+                <a mat-menu-item class="links" routerLink="admin-view-officer" routerLinkActive="active"> Officer List</a>
+                <a mat-menu-item class="links" routerLink="admin-add-officer" routerLinkActive="active"> Officer Add</a>
+              </mat-menu>
+              <!-- <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                                     <mat-expansion-panel-header>
+                                      <mat-panel-title class="panel-header">
+                                        <span class="material-symbols-outlined">person</span>&nbsp; Officer
+                                      </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                </mat-expansion-panel>
+              </mat-accordion> -->
+                
+          <a mat-list-item class="links" routerLink="admin-Students-Records" routerLinkActive="active">
+              <span class="material-symbols-outlined">school</span> &nbsp; Students </a>
+          <a mat-list-item class="links" routerLink="admin-Faculty" routerLinkActive="active">
+            <span class="material-symbols-outlined">supervisor_account</span> &nbsp; Faculty</a>
+          <a mat-list-item class="links" routerLink="admin-Library" routerLinkActive="active">
+            <span class="material-symbols-outlined">library_books</span> &nbsp; Library</a>
+          <a mat-list-item class="links" routerLink="admin-Fee" routerLinkActive="active">
+            <span class="material-symbols-outlined">currency_rupee</span> &nbsp; Fee Collections</a>
+            <a mat-list-item class="links" routerLink="admin-PlacementCell" routerLinkActive="active">
+              <span class="material-symbols-outlined">webhook</span> &nbsp; Placements Cell</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

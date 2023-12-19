@@ -1,0 +1,50 @@
+<div class="container mt-4">
+    <h1 class="text-center">Student Marks Details</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="Thead">
+                <tr>
+                    <th>Hallticket</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Sem</th>
+                    <th>Subject1</th>
+                    <th>Total Marks</th>
+                    <th>Marks</th>
+                    <th>Subject2</th>
+                    <th>Total Marks</th>
+                    <th>Marks</th>
+                    <th>Subject3</th>
+                    <th>Total Marks</th>
+                    <th>Marks</th>
+                    <th>Total Marks</th>
+                    <th>Scored Marks</th>
+                    <th>%</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of viewmarks ">
+                    <td>{{v.hallticket}}</td>
+                    <td>{{v.studentname}}</td>
+                    <td>{{v.branch}}</td>
+                    <td>{{v.sem}}</td>
+                    <td>{{v.subject1}}</td>
+                    <td>{{v.subject1totalmarks}}</td>
+                    <td>{{v.subject1marks}}</td>
+                    <td>{{v.subject2}}</td>
+                    <td>{{v.subject2totalmarks}}</td>
+                    <td>{{v.subject2marks}}</td>
+                    <td>{{v.subject3}}</td>
+                    <td>{{v.subject3totalmarks}}</td>
+                    <td>{{v.subject3marks}}</td>
+                    <td>{{v.totalscoredmarks}}</td>
+                    <td>{{v.totalMarks}}</td>
+                    <td>{{v.percentage}}</td>
+                    <td>{{v.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+

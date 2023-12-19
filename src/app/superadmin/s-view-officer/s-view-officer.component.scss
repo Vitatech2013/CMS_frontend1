@@ -1,0 +1,20 @@
+.table{
+    width: 100%;
+}
+.heading{
+    background-color:#403776;
+    color: #f8cf03;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+.edit{
+    cursor: pointer;
+    color: rgb(146, 155, 255);
+  }
+  .edit:hover{
+    color: blue;
+  }
+  .tBody{
+    text-align: center;
+}

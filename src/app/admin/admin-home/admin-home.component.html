@@ -1,0 +1,95 @@
+<div class="container-fluid">
+    <div class="row">
+        <h3 class="title mt-4 px-4">Welcome Admin!</h3>
+    </div>
+    <div class="row mt-4 px-3">
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-comman w-100 mb-2">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-info">
+                            <h6>Students</h6>
+                            <h3>{{Students}}+</h3>
+                        </div>
+                        <div class="db-icon">
+                            <img src="assets/images/studenticon.svg" alt="ffff">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-comman w-100 mb-2">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-info">
+                            <h6>Departments</h6>
+                            <h3>4+</h3>
+                        </div>
+                        <div class="db-icon">
+                            <img src="assets/images/departmenticon.svg" alt="ffff">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-comman w-100 mb-2">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-info">
+                            <h6>Officers</h6>
+                            <h3>{{OfficerList}}+</h3>
+                        </div>
+                        <div class="db-icon">
+                            <img src="assets/images/Sadminofficerlogo.png" alt="ffff" style="height:55px;width:55px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 d-flex">
+            <div class="card bg-comman w-100">
+                <div class="card-body">
+                    <div class="db-widgets d-flex justify-content-between align-items-center">
+                        <div class="db-info">
+                            <h6>Faculty</h6>
+                            <h3>{{FacultyList}}</h3>
+                        </div>
+                        <div class="db-icon">
+                            <img src="assets/images/Sadminfacultylogo.png" alt="ffff" style="height:55px;width:55px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3 px-4">
+        <div class="card bg-info w-100" style="border-color: #fff;border-radius: 10px;">
+            <h3 class="quotes mt-2">"Education is the Movement from darkness to light"</h3>
+        </div>
+    </div>
+    <div class="row mt-3 px-3">
+        <div class="col-sm-6">
+            <img src="assets/images/admnplacementcell.jpeg" alt="asas" style="height: 100%;width:100%;border-radius: 10px;">
+        </div>
+        <div class="col-sm-6">
+            <h2 class="placement">Placement Cell</h2>
+
+               <span class="Pinformation"> Placement training is an essential part of students education. Almost every students must get these during their college time. These training forms a base which is essential to grab a worthy job. One of the other way to give a proper training is to offer internships to students.
+Internships are a good way to enter the Corporate world. Students learn a lot about specific skills such as communication skills, teamwork, Time Management along with other Industry skills which help them gain a competitive advantage over others.
+               </span>
+               <br>
+               <div class="text-center">
+                <button class="Pbtn mt-3" (click)="open()">view-more</button>
+               </div>
+        </div>
+    </div>
+</div>
+
+  <footer class="text-center text-white" style="background-color: #caced1;">
+    <div class="text-center p-3" style="background-color: black;">
+        <span style="color: white;">© 2023 Copyright:</span>&nbsp;
+        <a class="text" routerLink="/home">Bright Institute of Technology and Science</a>
+      </div>
+  </footer>

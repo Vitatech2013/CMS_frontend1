@@ -1,0 +1,265 @@
+<div class="container">
+    <h2 class="head mt-4 mb-2">Students</h2>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-12">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#EEE-Students" role="tab" aria-controls="pills-EEE-Students" aria-selected="true" (click)="forEEEStudents()">EEE-STUDENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#ECE-Students" role="tab" aria-controls="pills-ECE-Students" aria-selected="false" (click)="forECEStudents()">ECE-STUDENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#CSE-Students" role="tab" aria-controls="pills-CSE-Students" aria-selected="false" (click)="forCSEStudents()">CSE-STUDENTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#MECH-Students" role="tab" aria-controls="pills-MECH-Students" aria-selected="false" (click)="forMECHStudents()">MECH-STUDENTS</a>
+              </li>
+          </ul>
+
+<!-- EEE-Department Students Record -->
+
+          <div class="tab-content mt-3">
+          <div class="tab-pane fade show active" id="EEE-Students">
+            <div class="row mt-4">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.SearchEEEValue">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search-student-btn">
+                        <button type="btn" class="btn btn-primary" (click)="searchEEEdata()" >Search</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">HallTicketNo</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">StudentType</th>
+                            <th scope="col">AdmissionFee</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">AllotmentOrder</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let EEE of EEEList; index as i" class="tBody">
+                            <th scope="row">{{i+1}}</th>
+                            <td style="color: black;font-weight:bold;">{{EEE.hallticket}}</td>
+                            <td style="color: rgb(14, 178, 207);font-weight:bold;">{{EEE.firstname}}&nbsp;{{EEE.lastname}}</td>
+                            <td>{{EEE.branch}}</td>
+                            <td>{{EEE.typeofStudent}}</td>
+                            <td>{{EEE.adminssionfee}}</td>
+                            <td>{{EEE.status}}</td>
+                            <td class="download" (click)="download(EEE)">
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                            </td>
+                            <td>
+                                <a class="edit" (click)="open(EEE)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!-- ECE-Department Students Record -->
+
+          <div class="tab-pane fade" id="ECE-Students">
+            <div class="row mt-4">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.SearchECEValue">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search-student-btn">
+                        <button type="btn" class="btn btn-primary" (click)="searchECEdata()">Search</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">HallTicketNo</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">StudentType</th>
+                            <th scope="col">AdmissionFee</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">AllotmentOrder</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ECE of ECEList; index as i" class="tBody">
+                            <th scope="row">{{i+1}}</th>
+                            <td style="color: black;font-weight:bold;">{{ECE.hallticket}}</td>
+                            <td style="color: rgb(14, 178, 207);font-weight:bold;">{{ECE.firstname}}&nbsp;{{ECE.lastname}}</td>
+                            <td>{{ECE.branch}}</td>
+                            <td>{{ECE.typeofStudent}}</td>
+                            <td>{{ECE.adminssionfee}}</td>
+                            <td>{{ECE.status}}</td>
+                            <td class="download" (click)="download(ECE)">
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                            </td>
+                            <td>
+                                <a class="edit" (click)="open(ECE)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!-- CIVIL-Department Students Record -->
+
+          <div class="tab-pane fade" id="CSE-Students">
+            <div class="row mt-4">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.SearchCSEValue">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search-student-btn">
+                        <button type="btn" class="btn btn-primary" (click)="searchCSEdata()">Search</button>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">HallTicketNo</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">StudentType</th>
+                            <th scope="col">AdmissionFee</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">AllotmentOrder</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let CSE of CSEList; index as i" class="tBody">
+                            <th scope="row">{{i+1}}</th>
+                            <td style="color: black;font-weight:bold;">{{CSE.hallticket}}</td>
+                            <td style="color: rgb(14, 178, 207);font-weight:bold;">{{CSE.firstname}}&nbsp;{{CSE.lastname}}</td>
+                            <td>{{CSE.branch}}</td>
+                            <td>{{CSE.typeofStudent}}</td>
+                            <td>{{CSE.adminssionfee}}</td>
+                            <td>{{CSE.status}}</td>
+                            <td class="download" (click)="download(CSE)">
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                            </td>
+                            <td>
+                                <a class="edit" (click)="open(CSE)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!-- MECH-Department Students Record -->
+
+          <div class="tab-pane fade" id="MECH-Students">
+            <div class="row mt-4">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.SearchMECHValue">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search-student-btn">
+                        <button type="btn" class="btn btn-primary" (click)="searchMECHdata()">Search</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">HallTicketNo</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Branch</th>
+                            <th scope="col">StudentType</th>
+                            <th scope="col">AdmissionFee</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">AllotmentOrder</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let MECH of MECHList; index as i" class="tBody">
+                            <th scope="row">{{i+1}}</th>
+                            <td style="color: black;font-weight:bold;">{{MECH.hallticket}}</td>
+                            <td style="color: rgb(14, 178, 207);font-weight:bold;">{{MECH.firstname}}&nbsp;{{MECH.lastname}}</td>
+                            <td>{{MECH.branch}}</td>
+                            <td>{{MECH.typeofStudent}}</td>
+                            <td>{{MECH.adminssionfee}}</td>
+                            <td>{{MECH.status}}</td>
+                            <td class="download" (click)="download(MECH)">
+                                <span class="material-symbols-outlined">
+                                    download
+                                </span>
+                            </td>
+                            <td>
+                                <a class="edit" (click)="open(MECH)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+
+        </div>        
+        </div>
+    </div>
+  </div> 
+
+
+
+
+  

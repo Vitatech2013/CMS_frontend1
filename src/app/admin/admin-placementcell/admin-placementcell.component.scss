@@ -1,0 +1,79 @@
+.head{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+// .card{
+//     border-radius: 5px;
+//     background-color: azure;
+//     height: 280px;
+//     // margin-left: 5px;
+//     margin-bottom: 10px;
+// }
+.mat-expansion-panel{
+    background-color: lavender;
+    width: 100%;
+    margin: auto;
+
+}
+// table{
+//     width: 100%;
+//     background-color: antiquewhite;
+//     margin: auto;
+// }
+// .thead{
+//     background-color: darkkhaki;
+//     height: 44px;
+//     color:mediumblue;
+//     text-align: center;
+// }
+// .body{
+//     background-color: cornsilk;
+//     height: 50px;
+//     text-align: center;
+// }
+// mat-panel-title{
+//     color: midnightblue;
+// }
+.headings{
+    background-color: cornflowerblue;
+    height: 45px;
+    color: rgb(45, 2, 2);
+    vertical-align: middle;
+    text-align: center;
+}
+.body{
+    text-align: center;
+    height: 50px;
+    background-color: transparent;
+}
+.panel-header{
+    font-size: 15px;
+    font-weight: 500;
+    color: blue;
+}
+.span{
+    width: 3%;
+    color: black;
+    font-weight: 400;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
+}
+.Expand{
+    color: rgb(116, 116, 249);
+    cursor: pointer;
+}
+.Expand:hover{
+color:blue;
+}
+.pending{
+    color: brown;
+}
+.success{
+    color: green;
+}

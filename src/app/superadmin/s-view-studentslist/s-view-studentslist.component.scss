@@ -1,0 +1,52 @@
+.search-student-btn .btn-primary {
+    min-width: 135px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 9px 15px;
+    background-color:#403776;
+   color: #f8cf03;
+}
+body {
+    margin: 2rem 0rem;  
+  }
+  
+  h4 {
+    margin: 3rem 0rem 2rem;
+  }
+  .head{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.heading{
+    background-color:#403776;
+    color: #f8cf03;
+    font-size:14px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.form-control{
+    background-color: floralwhite;
+    border-color: rgb(228, 136, 16);
+    color: black;
+    font-weight: 500;
+}
+.nav-pills .nav-link.active{
+  background-color: midnightblue;
+}
+.edit{
+  cursor: pointer;
+  color: rgb(146, 155, 255);
+}
+.edit:hover{
+  color: blue;
+}
+.tBody{
+  text-align: center;
+}
+.download{
+  color: green;
+  cursor: pointer;
+}

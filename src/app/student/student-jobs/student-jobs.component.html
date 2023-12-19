@@ -1,0 +1,96 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-12">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#jobstatus" role="tab" aria-controls="pills-EEE-Students" aria-selected="true">View your jobs status</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#alljobs" role="tab" aria-controls="pills-ECE-Students" aria-selected="false">Apply For A Job</a>
+            </li>
+          </ul>
+
+
+
+          <div class="tab-content mt-3">
+          <div class="tab-pane fade show active" id="jobstatus">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>S.no</th>
+                            <th>Company Name</th>
+                            <th>Company Email</th>
+                            <th>Job Role</th>
+                            <th>Skills</th>
+                            <th>status</th>
+                            <th>interview</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let j of showJobStatus index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{j.companyname}}</td>
+                            <td>{{j.emailid}}</td>
+                            <td>{{j.jobrole}}</td>
+                            <td>{{j.skills}}</td>
+                            <td>{{j.status}}</td>
+                            <td>{{j.interview}} <span *ngIf="j.interview==''">No Interview</span> </td>
+                            <td>{{j.remarks}} <span *ngIf="j.remarks==''">No Remarks</span> </td>
+                   
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+
+
+          <div class="tab-pane fade" id="alljobs">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>S.no</th>
+                            <th>Company Name</th>
+                            <th>Company Email</th>
+                            <th>Job Location</th>
+                            <th>Job Role</th>
+                            <th>Required Skills</th>
+                            <th>Last Date</th>
+                            <th>Website</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let j of allJobs index as i">
+                            <td>{{i+1}}</td>
+                            <td>{{j.companyname}}</td>
+                            <td>{{j.emailid}}</td>
+                            <td>{{j.joblocation}}</td>
+                            <td>{{j.jobrole}}</td>
+                            <td>{{j.requiredskills}}</td>
+                            <td>{{j.applylastdate}}</td>
+                            <td>{{j.companywebsite}}</td>
+                            <td>
+                                <button mat-raised-button color="primary" (click)="applyJob(j)">Apply</button>
+                            </td>
+                          
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+
+
+       
+
+
+        </div>        
+        </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,56 @@
+.title {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    background-color: rgb(54, 50, 66);
+}
+
+.nav-link {
+    color: white;
+    font-size: 16px;
+    margin: 2px;
+}
+
+.nav-pills>li>a.active {
+    background-color: #ffffff !important;
+    color: black;
+    font-size: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.bg-violet {
+    background-color: black;
+    padding: 0.5rem;
+}
+
+input {
+    border: 2px solid rgb(43, 40, 40);
+    background-color: white;
+}
+
+input:focus {
+    background-color: whitesmoke;
+}
+
+
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 600px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+
+
+// .search{
+//    border: 0;
+//    box-shadow: ;
+// }

@@ -1,0 +1,145 @@
+<div class="row g-0">
+    <div class="row s">
+        <div class="col-sm-3">
+            <h2 class="t"> Enter Emplyoee Id : </h2>
+        </div>
+        <div class="col-sm-7 mb-1">
+            <input type="text" class="form-control form-control-sm text text-primary" placeholder="Enter Employee Id"
+                [(ngModel)]="this.SearchValue">
+        </div>
+        <div class="col-sm-2 mb-1">
+            <button class="btn btn-info btn-sm" (click)="searchFee()">Search</button>
+        </div>
+
+    </div>
+    <div class="list">
+        <div *ngFor="let f of fees index as i">
+            <div class="row g-0">
+                <div class="col-sm-1 text-center mt-2">
+                    <span class="sno">S.No: {{i+1}}</span>
+                </div>
+
+                <div class="col-sm-10 main m-auto">
+                    <div class="bg card text-center">
+                        <div class="row sd">
+                            <div class="col-sm-3">
+                                <label class="form-label">Student Name</label>
+                                <h2>{{f.studentname}}</h2>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Student hallticket Number</label>
+                                <h2>{{f.hallticket}}</h2>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Branch</label>
+                                <h2>{{f.branch}}</h2>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-danger btn-sm m-1 w-80" (click)="edit(f)">
+                                    <i class="bi bi-pencil-square edit"></i>&nbsp;&nbsp;
+                                    <span>Update Fee Status</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="row ">
+                                        <div class="col-sm-5">
+                                            <p>Admission Fee</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>{{f.admissionfee}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="status">{{f.admissionfeestatus}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="row ">
+                                        <div class="col-sm-5">
+                                            <p>College Fee</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>{{f.collegefee}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="status">{{f.collegefeestatus}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="row ">
+                                        <div class="col-sm-5">
+                                            <p>Library Fee</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>{{f.libraryfee}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="status">{{f.libraryfeestatus}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="row ">
+                                        <div class="col-sm-5">
+                                            <p>JNTU Fee</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>{{f.jntufee}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="status">{{f.jntufeestatus}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="row ">
+                                        <div class="col-sm-5">
+                                            <p>Bus Fee</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>{{f.busfee}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="status">{{f.busfeestatus}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="card ">
+                                    <div class="row ">
+                                        <div class="col-sm-5">
+                                            <p>Hostel Fee</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <p>{{f.hostelfee}}</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="status">{{f.hostelfeestatus}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>

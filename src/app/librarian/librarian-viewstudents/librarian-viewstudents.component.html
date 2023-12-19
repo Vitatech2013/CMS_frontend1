@@ -1,0 +1,47 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Students</div>
+    </div>
+<div>
+
+<div>
+    <mat-card>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col">S.No</th>
+                    <th scope="col">firstname</th>
+                    <th scope="col">lastname</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">dob</th>
+                    <th scope="col">mobileno</th>
+                    <th scope="col">emailid</th>
+                    <th scope="col">hallticket</th>
+                    <th scope="col">branch</th>
+                    <th scope="col">parentname</th>
+                    <th scope="col">parentsmobileno</th>
+                    <th scope="col">Student-Photo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr *ngFor="let S of students index as i">
+                  <th>{{i+1}}</th>
+                  <th>{{S.firstname}}</th>
+                  <th>{{S.lastname}}</th>
+                  <th>{{S.gender}}</th>
+                  <th>{{S.dob | date}}</th>
+                  <th>{{S.mobileno}}</th>
+                  <th>{{S.emailid}}</th>
+                  <th>{{S.hallticket}}</th>
+                  <th>{{S.branch}}</th>
+                  <th>{{S.parentname}}</th>
+                  <th>{{S.parentsmobileno}}</th>
+                  <th>
+                    <img src="{{S.photo}}" height="50%" width="50%">
+                </th>
+                 </tr>
+                </tbody>
+              </table>
+        </div>
+    </mat-card>
+</div>

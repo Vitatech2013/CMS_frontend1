@@ -1,0 +1,40 @@
+
+
+<div class="container table-responsive">
+
+
+    <table class="table table-bordered text-center ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Hall Ticket</th>
+            <th scope="col">Branch</th>
+            <th scope="col">DOB</th>
+            <th scope="col">SSC %</th>
+            <th scope="col">Inter %</th>
+            <th scope="col">Degree %</th>
+            <th scope="col">Resume</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of students index as i" >
+            <td class="align-middle">{{i+1}}</td>
+            <td class="align-middle">{{s.name}}</td>
+            <td class="align-middle">{{s.hallticket}}</td>
+            <td class="align-middle">{{s.branch}}</td>
+            <td class="align-middle">{{s.dob}}</td>
+            <td class="align-middle">{{s.sscpercentage}}</td>
+            <td class="align-middle">{{s.interpercentage}}</td>
+            <td class="align-middle">{{s.degreepercentage}}</td>
+            <td class="align-middle"><i class="bi bi-download" style="font-size: 1.5rem; color:rgb(69, 159, 249); cursor: pointer;" (click)="downloadResume(s.resume)"></i></td>
+            <td class="align-middle"><p style="font-size: 1rem;" [ngClass]="s.status=='accept'?'badge badge-success':'badge badge-danger'"> {{s.status}}</p></td>
+            <td>
+                <button class="btn" (click)="changeStatus(s)"><i class="bi bi-arrows-angle-expand" style="font-size: 1.5rem; color:rgb(69, 159, 249)"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

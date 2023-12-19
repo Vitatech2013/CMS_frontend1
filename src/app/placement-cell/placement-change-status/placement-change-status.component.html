@@ -1,0 +1,64 @@
+
+<i class="bi bi-x-square-fill" mat-dialog-close ></i>
+<h2 mat-dialog-title>Student Details</h2>
+<mat-dialog-content class="mat-typography">
+<mat-card>
+    <mat-card-content>
+                <div class="row">
+            <div class="col-sm-8 card p-4">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p> <b>Student Name:</b>&nbsp; {{data.name}}</p>
+                        <p> <b>HallTicket No:</b> &nbsp;{{data.hallticket}}</p>
+                        <p> <b>Mobile:</b>&nbsp; {{data.mobilenumber}}</p>
+                        <p> <b>Email:</b>&nbsp; {{data.emailid}}</p>
+                        <p> <b>Branch:</b>&nbsp; {{data.branch}}</p>
+                        <p> <b>Address:</b>&nbsp; {{data.address}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p> <b>DOB:</b>&nbsp; {{data.dob}}</p>
+                        <p> <b>SSC %:</b>&nbsp; {{data.sscpercentage}}</p>
+                        <p> <b>Inter %:</b> &nbsp;{{data.interpercentage}}</p>
+                        <p> <b>Degree %:</b>&nbsp; {{data.degreepercentage}}</p>
+                        <p> <b>Status:</b>&nbsp; {{data.status}}</p>
+                        <p> <b>Remarks:</b>&nbsp; {{data.remarks}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <p> <b>Skills:</b>&nbsp; {{data.keyskills}}</p>
+                    <br>
+                    <p>Download Resume &nbsp;<a href="#">here</a></p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <form [formGroup]="statusChangeForm" (ngSubmit)="StatusChange()">
+                    <div class="mb-4">
+                    <label> Change Status</label>
+                    <select class="form-select" (change)="statusValue($any($event.target).value)" formControlName="status">
+                        <option value="pending">Pending</option>
+                        <option value="accept">Accept</option>
+                        <option value="reject">Reject</option>
+                        <option value="hold">Hold</option>
+                      </select>
+                    </div>
+          
+                      <div class="mb-3" [hidden]="remarkFlag">
+                        <label class="form-label">Remarks</label>
+                        <input type="email" class="form-control" formControlName="remarks">
+                      </div>
+       
+                      <div class="mb-3" [hidden]="interviewFlag">
+                        <label class="form-label">Schedule an Intervie</label>
+                        <input type="date" class="form-control" formControlName="interview">
+                      </div>
+
+                      <div class="text-center">
+                        <button type="submit" mat-raised-button color="accent">Update</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+</mat-dialog-content>

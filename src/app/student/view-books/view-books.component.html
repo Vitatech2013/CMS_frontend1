@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <h1 class="text-center">Student Books Details</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="Thead">
+                <tr>
+                    <th>Hallticket</th>
+                    <th>Student Name</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Branch Name</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Clearing Date</th>
+                    <th>Late Fine</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of viewbooks ">
+                    <td>{{v.hallticket}}</td>
+                    <td>{{v.studentname}}</td>
+                    <td>{{v.bookname}}</td>
+                    <td>{{v.autho}}</td>
+                    <td>{{v.branchname}}</td>
+                    <td>{{v.price}}</td>
+                    <td>{{v.date}}</td>
+                    <td>{{v.clearedBy}}</td>
+                    <td>{{v.fine}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+

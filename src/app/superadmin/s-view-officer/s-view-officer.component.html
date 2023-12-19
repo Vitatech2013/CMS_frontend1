@@ -1,0 +1,34 @@
+
+<div class="table-responsive text-nowrap table-hover">
+    <table class="table mt-0">
+        <thead>
+          <tr class="heading">
+            <th scope="col">S.No</th>
+            <th scope="col">Employee Id</th>
+            <th scope="col">EmployeeName</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Experience</th>
+            <th scope="col">Joining Date</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tBody" *ngFor="let O of OfficerList index as i">
+            <td >{{i+1}}</td>
+            <td><b>{{O.empid}}</b></td>
+            <td>{{O.name}}</td>
+            <td>{{O.qualification}}</td>
+            <td style="color:rgb(2, 80, 113);">{{O.yearofexperience}}</td>
+            <td>{{O.joiningdate}}</td>
+            <td>
+              <a class="edit" (click)="open(O)">
+                  <span class="material-symbols-outlined">
+                      edit_square
+                  </span>
+              </a>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+

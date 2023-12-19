@@ -1,0 +1,51 @@
+.table{
+    margin: auto;
+    width: 99%;
+}
+.tHead{
+    background-color:#3ea1e4;
+    color:white;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.tBody{
+    text-align: center;
+    line-height: 50px;
+}
+.btn{
+    background-color: #3ea1e4;
+    color: white;
+    width: 33%;
+    border-radius: 10px;
+    padding: 4px;
+}
+.btn.btn-icon{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+    line-height: 23px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #04a9f5;
+    border-color: #04a9f5;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #f44236;
+    border-color: #f44236;
+}
+.btn-success{
+    color: #fff;
+    background-color: #1de9b6;
+    border-color: #1de9b6;
+}
+.fa-eye{
+    font-size: 20px;
+}
+.table-striped{
+    background-color:rgba(47, 187, 252, 0.05) ;
+}

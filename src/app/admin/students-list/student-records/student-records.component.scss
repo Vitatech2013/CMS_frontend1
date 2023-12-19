@@ -1,0 +1,53 @@
+.search-student-btn .btn-primary {
+    min-width: 135px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 9px 15px;
+}
+body {
+    margin: 2rem 0rem;  
+  }
+  
+  h4 {
+    margin: 3rem 0rem 2rem;
+  }
+  .head{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+.tBody{
+  text-align: center;
+}
+.download{
+  color: green;
+  cursor: pointer;
+}
+.heading{
+  background-color:#2c619b;
+  color:rgb(247, 230, 227);
+  font-size:15px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+.edit{
+  cursor: pointer;
+  color: rgb(146, 155, 255);
+}
+.edit:hover{
+  color: blue;
+}

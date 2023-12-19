@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="row g-0 mt-2 text-center">
+        <form [formGroup]="feeForm">
+            <h2 class="title">Add Year Wise Fee</h2>
+            <div class="card mb-2 ">
+                <div class="row g-0 card-header">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-3">
+                        <h3 class="mt-2">Select The Year</h3>
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="form-select yearInput" aria-label="Default select example"
+                            formControlName="year">
+                            <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-2">
+                        <div class="mb-1">
+                            <label class="form-label">Admission Fee</label>
+                            <input type="number" class="form-control" formControlName="admissionfee">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-1">
+                            <label class="form-label">College Fee</label>
+                            <input type="number" class="form-control" formControlName="collegefee">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-1">
+                            <label class="form-label">Library Fee</label>
+                            <input type="number" class="form-control" formControlName="libraryfee">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-1">
+                            <label class="form-label">JNTU Fee</label>
+                            <input type="number" class="form-control" formControlName="jntufee">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-1">
+                            <label class="form-label">Bus Fee</label>
+                            <input type="number" class="form-control" formControlName="busfee">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="mb-1">
+                            <label class="form-label">Hostel Fee</label>
+                            <input type="number" class="form-control" formControlName="hostelfee">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center mb-3">
+                        <button type="submit" class="btn1 btn" *ngIf="addBtn" (click)="addFee()">Add Year
+                            Fee</button>
+                        <button type="submit" class="btn1 btn" *ngIf="updateBtn" (click)="updateFee()">Update
+                            Year
+                            Fee</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+        <h2 class="title">Year Wise Total Fee Details </h2>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Admission Fee</th>
+                        <th scope="col">College Fee</th>
+                        <th scope="col">Library Fee</th>
+                        <th scope="col">JNTU Fee</th>
+                        <th scope="col">Bus Fee</th>
+                        <th scope="col">Hostel Fee</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let f of fees index as i">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{f.year}}</td>
+                        <td>{{f.admissionfee}}</td>
+                        <td>{{f.collegefee}}</td>
+                        <td>{{f.libraryfee}}</td>
+                        <td>{{f.jntufee}}</td>
+                        <td>{{f.busfee}}</td>
+                        <td>{{f.hostelfee}}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm m-0" (click)="editFee(f)">Edit Fee</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <a routerLink="officer-home"><img class="logo p-2" src="/assets/images/bitslogo.jpg" alt="logo"></a>
+    <mat-nav-list >
+      <!-- <a mat-list-item class="links" routerLinkActive="active" routerLink="faculty-home"><i class="bi bi-house"></i> &nbsp; Home</a> -->
+      <a mat-list-item class="links" routerLinkActive="active" routerLink="faculty-viewstudents"><i class="bi bi-mortarboard"></i> &nbsp; Students</a>
+      <a mat-list-item  class="links" routerLinkActive="active" routerLink="faculty-addtt"><i class="bi bi-table"></i>&nbsp; Add timetable</a>
+      <a mat-list-item   class="links" routerLinkActive="active" routerLink="faculty-addmarks"><i class="bi bi-percent"></i>&nbsp; Add Marks</a>
+      <a mat-list-item  class="links" routerLinkActive="active" routerLink="faculty-viewtt"><i class="bi bi-table"></i>&nbsp; View Timetable</a>
+      <a mat-list-item  class="links" routerLinkActive="active" routerLink="faculty-viewmarks"><i class="bi bi-percent"></i>&nbsp; View Marks</a>
+      <a mat-list-item  class="links" routerLinkActive="active" routerLink="faculty-profile"><i class="bi bi-person-circle"></i>&nbsp; Profile</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>BITS</span>
+      <span class="space"></span>
+      <!-- <div>
+        <button class="btn" routerLink="/home"  (click)="logout()">Logout</button>
+      </div> -->
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="{{faculty.photo}}"
+            class="rounded-circle "
+            height="45"
+            alt="IMG"
+            loading="lazy"
+           
+          />
+          &nbsp;<p class="fs-6 m-auto"> {{faculty.name}}</p>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" routerLink="faculty-profile">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" >Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <ng-container>
+      <router-outlet></router-outlet>
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

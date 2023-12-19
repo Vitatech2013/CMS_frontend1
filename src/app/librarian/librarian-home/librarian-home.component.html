@@ -1,0 +1,35 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Profile</div>
+  </div>
+  <mat-card>
+        <section >
+          <div class="container py-5">
+              <div class="row">
+                  <div class="col-md-12 col-xl-6 m-auto">
+      
+                      <div class="card">
+                          <div class="card-body text-center" >
+                              <div class="mt-3 mb-4">
+                                  <img src="{{profile.photo}}"
+                                      class="rounded-circle img-fluid" style="width: 100px;" />
+                              </div>
+                              <h1  class="mb-2">Name:- {{profile.name}}</h1>
+                              <h2 >Employee Id:-{{profile.empid}}</h2>
+                              <h2 >Email Id:-{{profile.emailid}}</h2>
+                              <h2 >Qualification:-{{profile.qualification}}</h2>
+                              <h2>DOB:-{{profile.dob | date}}</h2>
+                              <div>
+                                  <h2> Mobile No: <span class="text-success">{{profile.mobileno}}</span></h2>
+                              </div>
+                              <button type="button" class="btn btn-primary" (click)="editProfile(profile)">
+                                  Edit-Profile
+                              </button>
+      
+                          </div>
+                      </div>
+      
+                  </div>
+              </div>
+          </div>
+      </section>
+    </mat-card>

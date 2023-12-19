@@ -1,0 +1,35 @@
+.head{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.heading{
+    background-color:#2c619b;
+    color: #f8cf03;
+    height: 55px;
+}
+.table thead th{
+    vertical-align:middle;
+} 
+.table{
+    width: 100%;
+}
+.th{
+    text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+.btn{
+    color: blue;
+    cursor: pointer;
+}
+.btn:hover{
+    color:green;
+    transform: scale(1.4);
+}

@@ -1,0 +1,98 @@
+<section style="background-color: #eee;">
+<div class="container py-3">
+    <div  class=" mb-4 text-center ">
+        <h1 style="font-weight: bold;">STUDENTS ADD TIMETABLE</h1><hr>
+</div>
+    <div class="col-sm-9 m-auto">
+        <div class="card mb-4 bg-light rounded-3 p-3">
+            <div class="card-body">
+                <form [formGroup]="TimetableForm" (ngSubmit)="AddTT()">
+                    <div class="col-sm-12">
+                    <div class="row mb-3" >
+                        <div class="col-sm-6 ">
+                            <label class="form-label">Day</label>
+                            <select class="form-select form-control" formControlName="day">
+                                <option  readonly>--select--</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tueday">Tueday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select form-control" formControlName="branch">
+                                <option readonly>--select--</option>   
+                                <option value="EEE">Electrical Engg</option>
+                                <option value="MECH">Mechanical Engg</option>
+                                <option value="ECE">Electronics Engg</option>
+                                <option value="CSE">Computer Engg</option> 
+                            </select>               
+                                 </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Hour-1</label>
+                            <input type="text" class="form-control" formControlName="hour1">                          </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Subject</label>
+                            <input type="text" class="form-control" formControlName="subject1">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Faculty</label>
+                            <input type="text" class="form-control"  formControlName="faculty1">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Hour-2</label>
+                            <input type="text" class="form-control" formControlName="hour2">                           </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Subject</label>
+                            <input type="text" class="form-control"  formControlName="subject2">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Faculty</label>
+                            <input type="text" class="form-control"  formControlName="faculty2">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Hour-3</label>
+                            <input type="text" class="form-control" formControlName="hour3">                           </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Subject</label>
+                            <input type="text" class="form-control"  formControlName="subject3">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Faculty</label>
+                            <input type="text" class="form-control" formControlName="faculty3">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Hour-4</label>
+                            <input type="text" class="form-control" formControlName="hour4">
+                           </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Lab</label>
+                            <input type="text" class="form-control" formControlName="lab">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Lab Asst</label>
+                            <input type="text" class="form-control" formControlName="labasst">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                <button type="submit" class="btn btn-primary me-3">Add Timetable</button>
+            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

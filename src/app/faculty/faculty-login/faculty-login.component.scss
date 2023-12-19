@@ -1,0 +1,49 @@
+
+.head {
+    background-color: rgb(37, 7, 58);
+}
+
+.logo {
+    width: 90%;
+    border-radius: 50%;
+    height: 50px;
+}
+.adminlogin{
+    margin: 100px auto;
+}
+.header {
+    background-color: rgb(246, 201, 246);
+    padding: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.shadow{
+    background-color: #f0f3f6;
+    box-shadow: 10px 8px 8px -4px rgb(161, 161, 149);
+}
+
+.text-theme {
+    color: #084ec5 !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+}
+
+.btn-theme {
+    background-color: #1c4694;
+    color: #fff;
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+}

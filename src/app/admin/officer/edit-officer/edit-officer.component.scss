@@ -1,0 +1,41 @@
+.card{
+    background-color:tan;
+}
+.head{
+    text-align: center;
+    font-size: 22px;
+    color: darkviolet;
+    font-family: ui-monospace;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+h5{
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    color: blue;
+    font-family: initial;
+}
+.btn{
+    padding: 0.5rem 2.0rem;
+    background: #3D5EE1;
+    color: #fff;
+}
+.cancel{
+    padding: 0.5rem 2.0rem;
+    background: #cf1919;
+    color: #fff;
+    margin-left: 5px;
+    border-radius: 8px;
+}
+.material-symbols-outlined {
+    color: red;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}

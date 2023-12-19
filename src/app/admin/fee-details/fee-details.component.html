@@ -1,0 +1,180 @@
+<div class="container">
+    <h2 class="head mt-4 mb-2">Fees</h2>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-12">
+          <ul class="nav nav-pills">
+
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#Studentsfee" role="tab" aria-controls="pills-Studentsfee" aria-selected="false">STUDENTS-FEE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#Transactionfee" role="tab" aria-controls="pills-Transactionfee" aria-selected="false">TRANSACTION-FEE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#Collegefee" role="tab" aria-controls="pills-Collegefee" aria-selected="true">College-FEE</a>
+            </li>
+          </ul>
+
+<!--College-Fees Record-->
+
+          <div class="tab-content mt-3">
+         
+
+<!-- Students Fee Record-->
+
+<div class="tab-pane fade show active" id="Studentsfee">
+    <div class="row mt-4">
+        <div class="col-lg-10">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.SearchValue">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="search-student-btn">
+                <button type="btn" class="btn btn-primary" (click)="searchstdfeedata()">Search</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="table-responsive text-nowrap">
+        <table class="table mt-1">
+            <thead>
+                <tr class="heading1">
+                    <th scope="col">S.NO</th>
+                    <th scope="col">HallTicketNo</th>
+                    <th scope="col">StudentName</th>
+                    <th scope="col">Branch</th>
+                    <th scope="col">Fee Details</th>
+                    <th scope="col">CleredBy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let S of Totalfee; index as i" class="tBody">
+                    <th scope="row">{{i+1}}</th>
+                    <td><b>{{S.hallticket}}</b></td>
+                    <td style="color:brown"><b>{{S.studentname}}</b></td>
+                    <td style="color: rgb(26, 129, 214);"><b>{{S.branch}}</b></td>
+                    <!-- <td>{{S.admissionfee}}</td>
+                    <td>{{S.adminssionfeestatus}}</td>
+                    <td>{{S.collegefee}}</td>
+                    <td>{{S.collegefeestatus}}</td>
+                    <td>{{S.libraryfee}}</td>
+                    <td>{{S.libraryfeestatus}}</td>
+                    <td>{{S.jntufee}}</td>
+                    <td>{{S.libraryfee}}</td>
+                    <td>{{S.busfee}}</td>
+                    <td>{{S.busfeestatus}}</td>
+                    <td>{{S.hostelfee}}</td>
+                    <td>{{S.hostelfeestatus}}</td> -->
+                    <td>
+                        <a class="edit" (click)="edit(S)">
+                            <span class="material-symbols-outlined">
+                                edit_square
+                                </span>
+                        </a>
+                    </td>
+                    <td style="color: green;font-size: 15px;">{{S.clearedby}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+<!-- Students Transactionfee Record-->
+
+          <div class="tab-pane fade" id="Transactionfee">
+            <div class="row mt-4">
+                <div class="col-lg-10">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.searchvalue">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search-student-btn">
+                        <button type="btn" class="btn btn-primary" (click)="searchdata()">Search</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading1">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">HallTicketNo</th>
+                            <th scope="col">Type of Fee</th>
+                            <th scope="col">Total Fee</th>
+                            <th scope="col">Paying Fee</th>
+                            <th scope="col">CleredBy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let S of Studentfee; index as i" class="tBody">
+                            <th scope="row">{{i+1}}</th>
+                            <td><b>{{S.hallticket}}</b></td>
+                            <td>{{S.typeoffee}}</td>
+                            <td>{{S.totalfee}}/-</td>
+                            <td>{{S.payingfee}}/-</td>
+                            <td style="color: green;font-size: 15px;">{{S.clearedby}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+          <div class="tab-pane fade " id="Collegefee">
+            <div class="card title mt-2">
+                <h2 class="Cname">BRIGHT INSTITUTE OF TECHNOLOGY AND SCIENCE</h2>
+            </div>
+            <div class="card title1 mt-3">
+                <div class="table-responsive px-5">
+                    <table class="table mt-1">
+                        <thead>
+                            <tr class="tablehead">
+                                <th scope="col" class="tablehead1">S.NO</th>
+                                <th scope="col" class="tablehead2">Head of Fees</th>
+                                <th scope="col" class="tablehead3">Grant of Money(Rupees)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let c of collegeFee">
+                                <td>1</td>
+                                <td class="feename">Admission Fee</td>
+                                <td>{{c.admissionfee}}/-</td>
+                            </tr>
+                            <tr *ngFor="let c of collegeFee">
+                                <td>2</td>
+                                <td class="feename">College Fee</td>
+                                <td>{{c.collegefee}}/-</td>
+                            </tr>
+                            <tr *ngFor="let c of collegeFee">
+                                <td>3</td>
+                                <td class="feename">Library Fee</td>
+                                <td>{{c.libraryfee}}/-</td>
+                            </tr>
+                            <tr *ngFor="let c of collegeFee">
+                                <td>4</td>
+                                <td class="feename">JNTU Fee</td>
+                                <td>{{c.jntufee}}/-</td>
+                            </tr>
+                            <tr *ngFor="let c of collegeFee">
+                                <td>5</td>
+                                <td class="feename">BUS Fee</td>
+                                <td>{{c.busfee}}/-</td>
+                            </tr>
+                            <tr *ngFor="let c of collegeFee">
+                                <td>6</td>
+                                <td class="feename">Hostel Fee</td>
+                                <td>{{c.hostelfee}}/-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+        </div>        
+        </div>
+    </div>
+  </div>
+

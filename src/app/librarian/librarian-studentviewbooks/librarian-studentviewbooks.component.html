@@ -1,0 +1,103 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">View Student-Books</div>
+    </div>
+<mat-card>
+    <!-- <div class="text-center ms-2 mb-3 search-bar">
+          <input type="text" placeholder="Search.. Student claimed books..." name="search">
+        <button type="submit" class="ms-1" (click)="searchStudent()">
+            <i class="bi bi-search"></i>
+        </button>  
+      </div> -->
+      <div class=" m-auto mb-2" >
+        <form [formGroup]="StudentForm" (ngSubmit)="search()">
+          <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <label class="form-label "><b class="ms-2 text-primary">*Search Student details*</b></label>
+                <input type="text" class="form-control" formControlName="hallticket" placeholder="Enter Student Hallticket no.">
+            </div>
+            <div class="col-sm-2 mt-4">
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </div>
+    </form>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">S.No</th>
+              <th scope="col">Librarian</th>
+              <th scope="col">Hall Ticket</th>
+              <th scope="col">Student Name</th>
+              <th scope="col">Book Name</th>
+              <th scope="col">Author</th>
+              <th scope="col">Branch Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Date</th>
+              <th scope="col">Fine</th>
+              <th scope="col">Cleared By</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr *ngFor="let S of searchStudents index as i">
+              <th>{{i+1}}</th>
+              <th>{{S.librarian}}</th>
+              <th>{{S.hallticket}}</th>
+              <th>{{S.studentname}}</th>
+              <th>{{S.bookname}}</th>
+              <th>{{S.author}}</th>
+              <th>{{S.branchname}}</th>
+              <th>{{S.price}}</th>
+              <th>{{S.date | date}}</th>
+              <th>{{S.fine}}</th>
+              <th>{{S.clearedBy}}</th>
+             
+           </tr>
+          </tbody>
+        </table>
+  </div>
+</mat-card>
+  <mat-card>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-primary">
+                <th scope="col">S.No</th>
+                <th scope="col">Librarian</th>
+                <th scope="col">Hall Ticket</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Branch Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Date</th>
+                <th scope="col">Fine</th>
+                <th scope="col">Cleared By</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr *ngFor="let BK of studentBooks index as i">
+                <th>{{i+1}}</th>
+                <th>{{BK.librarian}}</th>
+                <th>{{BK.hallticket}}</th>
+                <th>{{BK.studentname}}</th>
+                <th>{{BK.bookname}}</th>
+                <th>{{BK.author}}</th>
+                <th>{{BK.branchname}}</th>
+                <th>{{BK.price}}</th>
+                <th>{{BK.date | date}}</th>
+                <th>{{BK.fine}}</th>
+                <th>{{BK.clearedBy}}</th>
+                <th>
+                    <button mat-icon-button color="primary" (click)="editstudentbooks(BK)"><mat-icon>edit</mat-icon></button>
+                    <button mat-icon-button color="warn" (click)="deleteStudentbooks(BK)"><mat-icon>delete</mat-icon></button>
+                </th>
+             </tr>
+            </tbody>
+          </table>
+    </div>
+</mat-card>
+
+
+

@@ -1,0 +1,75 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: midnightblue;
+  color: #fff;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.headsection{
+  background-color: #030379;
+  color: #fff;
+}
+.spacer{
+ flex: 1 1 auto;
+}
+.material-symbols-outlined {
+  color: gold;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+.active {
+  border-left: 10px solid goldenrod;
+  border-bottom: 1px solid whitesmoke;
+  border-top: 1px solid whitesmoke;
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.links {
+  color: white;
+}
+
+.links:hover {
+  background-color: gray;
+}
+.logo {
+  width: 60%;
+  height: 80px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+.btn{
+  background: transparent;
+}
+.user-img{
+  width: 40px;
+  height: 40px;
+  border: 2px solid #E6E6E6;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.rounded-circle {
+  border-radius: 50%!important;
+}
+.dropdown-item{
+  cursor: pointer;
+  color: red;
+}

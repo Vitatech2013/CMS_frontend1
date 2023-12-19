@@ -1,0 +1,131 @@
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4 text-center">
+      <h1 style="font-weight: bold;">PROFILE</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <img src={{faculty.photo}} alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">{{faculty.name}}</h5>
+            <p class="text-muted mb-1">{{faculty.designation}}</p>
+            <p class="text-muted mb-4">{{faculty.department}}</p>
+          </div>
+          <div class="d-flex justify-content-center mb-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target=".bd-example-modal-lg" (click)="Edit(faculty)" >Edit Profile</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Faculty Id</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.empid}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Faculty Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.name}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Gender</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.gender}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email id</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.emailid}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mobile</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.mobileno}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of birth</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.dob}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Designation</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.designation}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Department</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.department}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Experiance</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.yearofexperience}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of Join</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.joiningdate}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Address</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{faculty.address}} , {{faculty.city}} , {{faculty.state}}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

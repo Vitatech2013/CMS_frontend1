@@ -1,0 +1,38 @@
+<div class="card m-4">
+<div class="table-responsive text-nowrap table-striped">
+    <table class="table mt-1">
+        <thead>
+          <tr class="tHead">
+            <th scope="col">S.No</th>
+            <th scope="col">Employee Id</th>
+            <th scope="col">EmployeeName</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Experience</th> 
+            <th scope="col">Joining Date</th>   
+            <th scope="col">Action</th>        
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tBody" *ngFor="let O of OfficerList index as i">
+            <td>{{i+1}}</td>
+            <td><b>{{O.empid}}</b></td>
+            <td>{{O.name}}</td>
+            <td>{{O.qualification}}</td>
+            <td>{{O.yearofexperience}}</td>
+            <td>{{O.joiningdate | date}}</td>
+            <td>
+                <button class="btn btn-icon btn-success btn-sm" (click)="open(O)">
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>&nbsp;
+                <button class="btn btn-icon btn-primary btn-sm" (click)="editOfficer(O)">
+                    <mat-icon>edit</mat-icon>
+                </button>&nbsp;
+                <button class="btn btn-icon btn-danger btn-sm" (click)="deleteOfficer(O)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>

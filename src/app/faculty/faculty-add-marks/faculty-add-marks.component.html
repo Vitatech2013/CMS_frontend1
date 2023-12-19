@@ -1,0 +1,114 @@
+<section style="background-color: #eee;">
+<div class="container py-2">
+        <div class=" mb-4 text-center ">
+                <h1 style="font-weight: bold;">STUDENTS ADD MARKS</h1><hr>
+        </div>
+    <div class="col-sm-12 m-auto">
+        <div class="card mb-4 bg-light rounded-3 p-3">
+            <div class="card-body">
+                <form [formGroup]="AddMarksForm" (ngSubmit)="AddMarks()">
+                    <div class="col-sm-12">
+                    <div class="row mb-3" >
+                        <div class="col-sm-3 ">
+                            <label class="form-label">Student id</label>
+                            <input type="text" class="form-control" formControlName="hallticket">
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="form-label">Student Name</label>
+                            <input type="text" class="form-control"  formControlName="studentname">
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="form-label ">Semister</label>
+                            <select class="form-select form-control"  formControlName="sem">
+                                <option value="" >--select--</option>
+                              <option value="sem1" >Semister-1</option>
+                              <option  value="sem2">Semister-2</option>
+                              <option  value="sem3">Semister-3</option>
+                              <option  value="sem4">Semister-4</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="form-label">Branch</label>
+                            <input type="text" class="form-control"  formControlName="branch">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Subject-1</label>
+                            <input type="text" class="form-control"  formControlName="subject1">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Total Marks</label>
+                            <input type="text" class="form-control"  formControlName="subject1totalmarks">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Marks Scored</label>
+                            <input type="text" class="form-control"  formControlName="subject1marks">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Subject-2</label>
+                            <input type="text" class="form-control"  formControlName="subject2">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Total Marks</label>
+                            <input type="text" class="form-control"  formControlName="subject2totalmarks">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Marks Scored</label>
+                            <input type="text" class="form-control" formControlName="subject2marks">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                            <label class="form-label ">Subject-3</label>
+                            <input type="text" class="form-control"  formControlName="subject3">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Total Marks</label>
+                            <input type="text" class="form-control"  formControlName="subject3totalmarks">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Marks Scored</label>
+                            <input type="text" class="form-control" formControlName="subject3marks" (change)="calculateMarks()">
+                        </div>
+                    </div><hr>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                           
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Grand Total</label>
+                            <input type="text" class="form-control" formControlName="totalMarks">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Total Marks Scored</label>
+                            <input type="text" class="form-control" formControlName="totalscoredmarks">
+                        </div>
+                    </div>
+                    <div class="row  mb-3">
+                        <div class="col-sm-4">
+                           
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Percentage</label>
+                            <input type="text" class="form-control" formControlName="percentage">
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="form-label ">Status</label>
+                            <input type="text" class="form-control" formControlName="status">
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="text-end">
+                <button type="submit" class="btn btn-primary me-3">Add Marks</button>
+            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

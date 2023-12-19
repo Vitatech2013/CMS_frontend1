@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <h1 class="text-center">Student Fee Details</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="Thead">
+                <tr>
+                    <th>Hallticket</th>
+                    <th>Type of Fee</th>
+                    <th>Total Fee</th>
+                    <th>Paid Fee</th>
+                    <th>Reamaning Fee</th>
+                    <th>Clearing Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of viewfee ">
+                    <td>{{v.hallticket}}</td>
+                    <td>{{v.typeoffee}}</td>
+                    <td>{{v.totalfee}}</td>
+                    <td>{{v.payingfee}}</td>
+                    <td>{{v.remainingfee}}</td>
+                    <td>{{v.clearedby}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+

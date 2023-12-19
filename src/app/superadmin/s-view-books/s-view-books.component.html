@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-12">
+          <ul class="nav nav-pills mt-4">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#Books" role="tab" aria-controls="pills-Books" aria-selected="true">Books-List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#StudentsBooks" role="tab" aria-controls="pills-StudentsBooks" aria-selected="false">Students-Books</a>
+              </li>
+          </ul>
+
+
+
+          <div class="tab-content mt-3">
+
+<!--Books Record-->
+
+          <div class="tab-pane fade show active" id="Books">
+            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">BookName</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let B of TotalBooks; index as i">
+                            <th scope="row">{{i+1}}</th>
+                            <td style="color:rgb(14, 178, 207); font-weight: bold;">{{B.bookname}}</td>
+                            <td>{{B.author}}</td>
+                            <td>{{B.department}}</td>
+                            <td>{{B.price}}</td>
+                            <td>{{B.quantity}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!---Student-Books-->
+          
+<div class="tab-pane fade" id="StudentsBooks">
+            
+    <div class="table-responsive">
+        <table class="table mt-1">
+            <thead>
+                <tr class="heading">
+                    <th scope="col">S.NO</th>
+                    <th scope="col">Librarian</th>
+                    <th scope="col">HallTicketno</th>
+                    <th scope="col">StudentName</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">BookName</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Date of Taken</th>
+                    <th scope="col">Total Fine</th>
+                    <th scope="col">ClearedBy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let SB of StdBooks; index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td style="font-weight: bolder;">{{SB.librarian}}</td>
+                    <td>{{SB.hallticket}}</td>
+                    <td>{{SB.studentname}}</td>
+                    <td>{{SB.branchname}}</td>
+                    <td>{{SB.bookname}}</td>
+                    <td>{{SB.author}}</td>
+                    <td>{{SB.price}}</td>
+                    <td>{{SB.date}}</td>
+                    <td>{{SB.fine}}</td>
+                    <td style="color:rgb(76, 76, 155);">{{SB.clearedBy}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+
+        </div>        
+        </div>
+    </div>
+  </div>
+
+
+

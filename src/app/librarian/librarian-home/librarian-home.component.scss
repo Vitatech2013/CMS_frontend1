@@ -1,0 +1,25 @@
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+  &__box {
+    min-height: 69px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 25px;
+  }
+
+  }
+.card{
+  background-color: rgba(248, 205, 237, 0.768);
+  margin-top: -5%;
+}
+.icons{
+  font-size: 25px;
+  margin: 10px;
+}
+mat-card{
+  width: 93%;
+  margin: auto;
+  margin-top: -2%;
+}

@@ -1,0 +1,210 @@
+<div class="row g-0">
+    <div class="col-sm-12">
+        <div class="" mat-dialog-close="true">
+            <h3 class="text-center">Edit & Update Details Of Students<span
+                    class="ic"><mat-icon>close</mat-icon></span> </h3>
+        </div>
+        <div class="card">
+            <form [formGroup]="studentEditForm" (ngSubmit)="updateStudent()">
+                <div class="card-body">
+                    <div class="row g-0">
+                        <div class="col-sm-7">
+                            <div class="p-3">
+                                <div class="row mb-1">
+                                    <h2 class="gs">General Information</h2>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">First name</label>
+                                        <input type="text" class="form-control" formControlName="firstname">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Last name</label>
+                                        <input type="text" class="form-control " formControlName="lastname">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <label class="form-label">Gender</label>
+                                            <div class="col-sm-2"></div>
+                                            <div class="col-sm-3">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="femaleGender" value="female" formControlName="gender" />
+                                                <label class="form-check-label" for="femaleGender">Female</label>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="maleGender" value="male" formControlName="gender" />
+                                                <label class="form-check-label" for="maleGender">Male</label>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="otherGender" value="others" formControlName="gender" />
+                                                <label class="form-check-label" for="otherGender">Other</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Date Of Birth</label>
+                                        <input type="date" class="form-control " formControlName="dob" />
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Mobile Number</label>
+                                        <input type="number" class="form-control" formControlName="mobileno" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Email Id</label>
+                                        <input type="email" class="form-control " formControlName="emailid" />
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Hall Ticket Number</label>
+                                        <input type="text" class="form-control" formControlName="hallticket" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Eamcet Rank</label>
+                                        <input type="number" class="form-control " formControlName="eamcetrank" />
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Type Of Student</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            formControlName="typeofStudent">
+                                            <option selected>--- select ---</option>
+                                            <option value="dayscholar">dayscholar</option>
+                                            <option value="hosteller">hosteller</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Branch</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            formControlName="branch">
+                                            <option selected>--- select ---</option>
+                                            <option value="EEE">EEE</option>
+                                            <option value="ECE">ECE</option>
+                                            <option value="CSE">CSE</option>
+                                            <option value="MECH">MECH</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-sm-6">
+                                        <label for="formFile" class="form-label">Upload Your Photo</label>
+                                        <input class="form-control" type="file" id="formFile" formControlName="photo"
+                                            (change)="onSelectPhotoFile($event)">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="formFile" class="form-label">Upload Your Aadhar Card</label>
+                                        <input class="form-control" type="file" id="formFile"
+                                            formControlName="aadharcopy" (change)="onSelectAadharFile($event)">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="formFile" class="form-label">Upload Your Allotment Order</label>
+                                        <input class="form-control" type="file" id="formFile"
+                                            formControlName="allotmentorder" (change)="onSelectAltmtOrderFile($event)">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Admission Fee</label>
+                                        <input type="number" class="form-control " formControlName="adminssionfee" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section-2 -->
+                        <div class="col-sm-5 bg-indigo">
+                            <div class="p-3">
+                                <h2 class="gs">Contact Details</h2>
+                                <div class="row mb-2">
+                                    <div class="col-sm-6">
+                                        <div class="form-outline form-white">
+                                            <label class="form-label">Parent Name</label>
+                                            <input type="text" class="form-control" formControlName="parentname" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-outline form-white">
+                                            <label class="form-label">Parent Profession</label>
+                                            <input type="text" class="form-control"
+                                                formControlName="parentprofession" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-6">
+                                        <div class="form-outline form-white">
+                                            <label class="form-label">Parent Mobile Number</label>
+                                            <input type="number" class="form-control"
+                                                formControlName="parentsmobileno" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-outline form-white">
+                                            <label class="form-label">Family Income</label>
+                                            <input type="number" class="form-control" formControlName="familyincome" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Religion</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            formControlName="religion">
+                                            <option selected>--- select ---</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Muslim">Muslim</option>
+                                            <option value="Christian">Christian</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Caste</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            formControlName="caste">
+                                            <option selected>--- select ---</option>
+                                            <option value="Bc-a">Bc-a</option>
+                                            <option value="Bc-b">Bc-b</option>
+                                            <option value="Bc-c">Bc-c</option>
+                                            <option value="Bc-d">Bc-d</option>
+                                            <option value="Sc">Sc</option>
+                                            <option value="St">St</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label" for="form3Examplea3">Address</label>
+                                    <div class="form-outline form-white">
+                                        <textarea type="text" rows="6" class="form-control"
+                                            formControlName="address"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-outline form-white">
+                                            <label class="form-label">City</label>
+                                            <input type="text" class="form-control" formControlName="city" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-outline form-white">
+                                            <label class="form-label">State</label>
+                                            <input type="text" class="form-control" formControlName="state" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success w-50">Update Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

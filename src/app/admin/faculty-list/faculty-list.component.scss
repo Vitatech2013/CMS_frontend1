@@ -1,0 +1,20 @@
+.head{
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.heading{
+    background-color:#2c619b;
+    color: #f8cf03;
+    height: 55px;
+}
+.table thead th{
+    vertical-align:middle;
+} 
+.edit{
+    cursor: pointer;
+    color: rgb(146, 155, 255);
+  }
+  .edit:hover{
+    color: blue;
+  }

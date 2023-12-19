@@ -1,0 +1,161 @@
+<section class="main p-3">
+    <div class="">
+        <h2 class="p-1 text-center profile-header">Your Profile</h2>
+        <div class="row">
+            <div class="col-sm-4  border-right">
+                <div class="">
+                    <div class="card-body text-center">
+                        <img src="{{officer.photo}}" alt="avatar" class="rounded-circle p-2" width="60%"
+                            height="200px">
+                        <h2 class="my-1">{{officer.name}} <span
+                                class=" text-primary q ">({{officer.qualification}})</span>
+                        </h2>
+                        <span class="text text-danger fw-bold">{{officer.empid}}</span>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <span>Department</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <span> {{officer.department}}</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <span>Designation</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <span> {{officer.typeofemployee}}</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Experience: <b>{{officer.yearofexperience}}</b> Years</h3>
+                        <div class="d-flex justify-content-center mb-2">
+                            <button type="submit" (click)="editProfile(officer)"
+                                class="btn btn-outline-primary btn-sm ms-1">Edit Profile</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-md-6 border-right">
+                        <div class=" mb-4 mb-md-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h2 class="details">Profile Details</h2>
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Full Name</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.name}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Mobile Number</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.mobileno}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Email Id</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.emailid}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Address</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">
+                                            {{officer.address}}
+                                            <br>
+                                            {{officer.city}}
+                                            <br>
+                                            {{officer.state}}
+                                            <br>
+                                            {{officer.pincode}}
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" mb-4 mb-md-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h2 class="details">Bank Details</h2>
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Full Name</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.name}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Account Number</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.bankaccountno}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Bank Name</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.bankname}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Branch of Bank</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.branchname}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Bank IFSC code</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.ifsccode}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0">Pancard Number</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class=" mb-0">{{officer.pancardno}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="p-1 text-center profile-footer"></h2>
+    </div>
+</section>

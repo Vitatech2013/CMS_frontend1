@@ -1,0 +1,125 @@
+<div class="container">
+  <h2 class="head mt-4 mb-2">Placement Cell</h2>
+</div>
+<div class="container mt-4">
+  <div class="row">
+      <div class="col-12 col-md-8 col-lg-12">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="pill" href="#Companies" role="tab" aria-controls="pills-Companies" aria-selected="true">No of Companies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#ApplyJobs" role="tab" aria-controls="pills-ApplyJobs" aria-selected="false">Job-AppliedList</a>
+          </li>
+        </ul>
+
+<!--Company Record-->
+
+        <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="Companies">            
+          <div class="container-fluid mt-4">
+              <mat-accordion *ngFor="let C of placements index as i">
+
+                  <mat-expansion-panel (opened)="panelOpenState = true"
+                                      (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title class="panel-header">
+                        <span class="span">{{i+1}}.</span>
+                       {{C.companyname}}
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <table class="table-responsive text-nowrap table-bordered">
+                      <thead>
+                          <tr class="headings">
+                              <th style="width:15%">CompanyName</th>
+                              <th style="width:5%">Mobleno</th>
+                              <th style="width:15%">Email-Id</th>
+                              <th style="width:15%">Joblocation</th>
+                              <th style="width:10%">Jobrole</th>
+                              <th style="width:20%">Required Skills</th>
+                              <th style="width:10%">Apply LastDate</th>
+                              <th style="width:10%"> &nbsp;website</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="body">
+                              <td style="color:rgb(30, 30, 81);font-weight: 600;font-size: 12px;">{{C.companyname}}</td>
+                              <td>{{C.mobileno}}</td>
+                              <td>{{C.emailid}}</td>
+                              <td>{{C.joblocation}}</td>
+                              <td>{{C.jobrole}}</td>
+                              <td>{{C.requiredskills}}</td>
+                              <td>{{C.applylastdate}}<sup style="color: red; font-size: 16px;">*</sup></td>
+                              <td>{{C.companywebsite}}</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </mat-expansion-panel>
+                </mat-accordion>
+                
+          </div>
+        </div>
+
+<!--Students Record for Apply Jobs -->
+
+        <div class="tab-pane fade" id="ApplyJobs">     
+          <div class="row mt-4">
+            <div class="col-lg-10">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search By HallTicketno ...." [(ngModel)]="this.searchValue">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="search-student-btn">
+                    <button type="btn" class="btn btn-primary" (click)="searchCandidate()">Search Candidate</button>
+                </div>
+            </div>
+          </div> 
+          
+          <div class="table-responsive table-hover">
+            <table class="table mt-1">
+                <thead>
+                    <tr class="headings">
+                        <th scope="col">S.NO</th>
+                        <th scope="col">HallTicketNo</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">CompanyName</th>
+                        <th scope="col">Job Role</th>
+                        <th scope="col">Interview</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Remarks</th>
+                        <th scope="col">Resume</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="body" *ngFor="let S of ApplyJobs; index as i">
+                        <td scope="row">{{i+1}}</td>
+                        <td><b>{{S.hallticket}}</b></td>
+                        <td>{{S.name}}</td>
+                        <td>{{S.branch}}</td>
+                        <td style="color: blue;">{{S.companyname}}</td>
+                        <td>{{S.jobrole}}</td>
+                        <td>{{S.interview}}<sup style="color: red;; font-size: 16px;">*</sup></td>
+                        <td [ngClass]="S.status=='accept'?'success':'pending'">{{S.status}}</td>
+                        <td>{{S.remarks}}</td>
+                        <td>
+                          <a class="Expand" (click)="resume()"><span class="material-symbols-outlined">download</span></a>
+                        </td>
+                        <td>
+                          <a class="Expand" (click)="details(S)"><span class="material-symbols-outlined">pan_zoom</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+          
+          
+
+        </div>
+
+      </div>        
+      </div>
+  </div>
+</div>

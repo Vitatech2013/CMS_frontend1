@@ -1,0 +1,59 @@
+<section style="background-color: #eee;">
+
+    <div class="container py-3">
+        <div class="container ">
+            <div class=" p-3 mb-4 text-center ">
+                <h1 style="font-weight: bold;">TIME TABLE</h1><hr>
+            </div>
+
+            <div class="card table-responsive">
+                <table class="table table-bordered  mb-0  m-auto">
+                    <thead class="bg-secondary">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hour-1</th>
+                            <th>Subject</th>
+                            <th>Faculty</th>
+                            <th>Hour-2</th>
+                            <th>Subject</th>
+                            <th>Faculty</th>
+                            <th>Hour-3</th>
+                            <th>Subject</th>
+                            <th>Faculty</th>
+                            <th>Hour-4</th>
+                            <th>Lab</th>
+                            <th>Faculty</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let timetable of timetables">
+                            <td>{{timetable.day}}</td>
+                            <td>{{timetable.hour1}}</td>
+                            <td>{{timetable.subject1}}</td>
+                            <td>{{timetable.faculty1}}</td>
+                            <td>{{timetable.hour2}}</td>
+                            <td>{{timetable.subject2}}</td>
+                            <td>{{timetable.faculty2}}</td>
+                            <td>{{timetable.hour3}}</td>
+                            <td>{{timetable.subject3}}</td>
+                            <td>{{timetable.faculty3}}</td>
+                            <td>{{timetable.hour4}}</td>
+                            <td>{{timetable.lab}}</td>
+                            <td>{{timetable.labasst}}</td>
+                            <td>
+                                <button type="button" class="btn" (click)="Edit(timetable)" data-bs-toggle="modal"
+                                    data-bs-target=".bd-example-modal-lg"><i class="bi bi-pencil-square"></i> </button>
+                                <button type="button" class="btn" (click)="deletett(timetable._id)"><i
+                                        class="bi bi-trash"></i> </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>

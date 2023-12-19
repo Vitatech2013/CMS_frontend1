@@ -1,0 +1,202 @@
+
+<div class="container">
+    <h2 class="head mt-4 mb-2">Faculty</h2>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-12">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#EEE-Faculty" role="tab" aria-controls="pills-EEE-Faculty" aria-selected="true">EEE-FACULTY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#ECE-Faculty" role="tab" aria-controls="pills-ECE-Faculty" aria-selected="false">ECE-FACULTY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#CSE-Faculty" role="tab" aria-controls="pills-CSE-Faculty" aria-selected="false">CSE-FACULTY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#MECH-Faculty" role="tab" aria-controls="pills-MECH-Faculty" aria-selected="false">MECH-FACULTY</a>
+              </li>
+          </ul>
+
+<!--EEE-Department Students Record-->
+
+          <div class="tab-content mt-3">
+          <div class="tab-pane fade show active" id="EEE-Faculty">            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">EMP-ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">EmployeeType</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Joining Date</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tBody" *ngFor="let EEE of EEEfaculty; index as i">
+                            <th scope="row">{{i+1}}</th>
+                            <td><b>{{EEE.empid}}</b></td>
+                            <td style="color:rgb(14, 178, 207); font-weight: bold;">{{EEE.name}}</td>
+                            <td>{{EEE.typeofemployee}}</td>
+                            <td>{{EEE.department}}</td>
+                            <td>{{EEE.yearofexperience}}</td>
+                            <td>{{EEE.joiningdate}}</td>
+                            <td>{{EEE.salary}}</td>
+                            <td>
+                                <a class="edit" (click)="open(EEE)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!--ECE-Department Students Record-->
+
+          <div class="tab-pane fade" id="ECE-Faculty">            
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">EMP-ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">EmployeeType</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Joining Date</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tBody" *ngFor="let ECE of ECEfaculty; index as i">
+                            <th scope="row">{{i+1}}</th>
+                            <td><b>{{ECE.empid}}</b></td>
+                            <td style="color:rgb(14, 178, 207); font-weight: bold;">{{ECE.name}}</td>
+                            <td>{{ECE.typeofemployee}}</td>
+                            <td>{{ECE.department}}</td>
+                            <td>{{ECE.yearofexperience}}</td>
+                            <td>{{ECE.joiningdate}}</td>
+                            <td>{{ECE.salary}}</td>
+                            <td>
+                                <a class="edit" (click)="open(ECE)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!--CIVIL-Department Students Record-->
+
+          <div class="tab-pane fade" id="CSE-Faculty">
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">EMP-ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">EmployeeType</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Joining Date</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tBody" *ngFor="let CSE of CSEfaculty; index as i">
+                            <th scope="row">{{i+1}}</th>
+                            <td><b>{{CSE.empid}}</b></td>
+                            <td style="color:rgb(14, 178, 207); font-weight: bold;">{{CSE.name}}</td>
+                            <td>{{CSE.typeofemployee}}</td>
+                            <td>{{CSE.department}}</td>
+                            <td>{{CSE.yearofexperience}}</td>
+                            <td>{{CSE.joiningdate}}</td>
+                            <td>{{CSE.salary}}</td>
+                            <td>
+                                <a class="edit" (click)="open(CSE)">
+                                    <span class="material-symbols-outlined">
+                                        edit_square
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+<!--MECH-Department Students Record-->
+
+          <div class="tab-pane fade" id="MECH-Faculty">
+            <div class="table-responsive">
+                <table class="table mt-1">
+                    <thead>
+                        <tr class="heading">
+                            <th scope="col">S.NO</th>
+                            <th scope="col">EMP-ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">EmployeeType</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Joining Date</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tBody" *ngFor="let MECH of MECHfaculty; index as i">
+                            <th scope="row">{{i+1}}</th>
+                            <td><b>{{MECH.empid}}</b></td>
+                            <td style="color:blue; font-weight: bold;">{{MECH.name}}</td>
+                            <td>{{MECH.department}}</td>
+                            <td>{{MECH.mobileno}}</td>
+                            <td>{{MECH.emailid}}</td>
+                            <td>{{MECH.joiningdate}}</td>
+                            <td>{{MECH.yearofexperience}}</td>
+                            <td>{{MECH.salary}}</td>
+                            <td>{{MECH.typeofemployee}}</td>
+                            <td>
+                                <span>{{MECH.address}}</span>,
+                                <span>{{MECH.city}}</span>,
+                                <span>{{MECH.state}}</span>,
+                                <span>{{MECH.pincode}}</span>
+                            </td>
+                            <td>
+                                <span>{{MECH.bankname}}</span>,
+                                <span>{{MECH.bankaccountno}}</span>,
+                                <span>{{MECH.ifsccode}}</span>,
+                                <span>{{MECH.branchname}}</span>
+                                <span>{{MECH.pancardno}}</span>
+                            </td>
+                            <td><img src="{{MECH.photo}}" width="100%" height="70%"></td>
+                            <td><img src="{{MECH.aadharcopy}}" width="50%" height="50%"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+
+        </div>        
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,143 @@
+<div class="container">
+    <div class="row">
+        <h3 class="text-center fw-bold">Update Student Fee</h3>
+        <form [formGroup]="editStudentFeeForm" (ngSubmit)="editStudentFee()">
+            <div class="col-sm-12">
+                <div class="card p-3">
+                    <div class="row mb-4">
+                        <div class="col-sm-4">
+                            <label class="col-form-label">Hallticket Number</label>
+                            <input type="text" class="form-control" formControlName="hallticket" readonly>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="col-form-label">Student Name</label>
+                            <input type="text" class="form-control" formControlName="studentname" readonly>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="col-form-label">Branch</label>
+                            <input type="text" class="form-control" formControlName="branch" readonly>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Admission Fee</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" formControlName="admissionfee" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Update Fee Status</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="admissionfeestatus">
+                                <option value="">-- Select --</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Colege Fee</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" formControlName="collegefee" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Update Fee Status</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="collegefeestatus">
+                                <option value="">-- Select --</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Library Fee</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" formControlName="libraryfee" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Update Fee Status</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="libraryfeestatus">
+                                <option value="">-- Select --</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">JNTU Fee</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" formControlName="jntufee" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Update Fee Status</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="jntufeestatus">
+                                <option value="">-- Select --</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Bus Fee</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" formControlName="busfee" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Update Fee Status</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="busfeestatus">
+                                <option value="">-- Select --</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Hostel Fee</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" formControlName="hostelfee" readonly>
+                        </div>
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Update Fee Status</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="hostelfeestatus">
+                                <option value="">-- Select --</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success btn-sm w-50 mt-2">Update Student Fee Status</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

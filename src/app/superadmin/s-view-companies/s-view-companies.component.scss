@@ -1,0 +1,91 @@
+.search-student-btn .btn-primary {
+    background-color: #403776;
+    color: gold;
+}
+.mat-expansion-panel{
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
+}
+.headings{
+    background-color: #403776;
+    height: 50px;
+    line-height: 2;
+    color: gold;
+    text-align: center;
+  }
+.body{
+    text-align: center;
+    height: 50px;
+    background-color: transparent;
+}
+.panel-header{
+    font-size: 15px;
+    font-weight: 500;
+    color: blue;
+}
+.span{
+    width: 3%;
+    color: black;
+    font-weight: 400;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
+}
+.Expand{
+    color: rgb(146, 155, 255);
+    cursor: pointer;
+}
+.Expand:hover{
+color: blue;
+}
+.pending{
+    background-color: #ffee4a;;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0.6em 7px;
+}
+.success{
+    background-color: #1de9b6;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0.6em 7px;
+}
+.form-control{
+    background-color: floralwhite;
+    border-color: rgb(228, 136, 16);
+    color: black;
+    font-weight: 500;
+}
+.nav-pills .nav-link.active{
+    background-color: midnightblue;
+  }
+  .download{
+    color: green;
+    cursor: pointer;
+  }
+h2{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #121224;
+    max-width: 100%;
+    display: block;
+}
+.material-symbols-outlined{
+    font-size: 14px;
+}
+.location{
+    color: red;
+}
+.card{
+    background-color: lightgrey;
+    border-radius: 5px;
+}

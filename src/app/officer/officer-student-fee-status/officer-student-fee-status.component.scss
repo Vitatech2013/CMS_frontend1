@@ -1,0 +1,64 @@
+input {
+    border: 2px solid rgb(38, 158, 179);
+}
+
+.t {
+    color: rgb(10, 104, 121);
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+}
+
+.sno {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.main {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bg {
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.s {
+    position: sticky;
+    top: 70px;
+    overflow-y: auto;
+}
+
+.list {
+
+    margin-top: 30px;
+}
+
+// .main {
+//     background-color: rgb(31, 48, 67);
+//     border-radius: 10px;
+// }
+
+// .sd {
+//     color: whitesmoke;
+// }
+
+.card {
+    margin: 0.3rem;
+    font-weight: bold;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+.status {
+    font-size: 18px;
+    text-transform: uppercase;
+}

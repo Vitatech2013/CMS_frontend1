@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-11 m-auto">
+            <div class="card  m-4 border-0">
+                <div class="card-header text-center bg-warning">
+                    <span class="title">update Your Company Details</span>
+                </div>
+                <div class="card-body mt-2">
+                    <form [formGroup]="placementProfileForm" (ngSubmit)="updateCompany()">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" formControlName="companyname">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Company Mobile Number</label>
+                                    <input type="number" class="form-control" formControlName="mobileno">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Company Email Id</label>
+                                    <input type="email" class="form-control" formControlName="emailid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Required Skills</label>
+                                    <input type="text" class="form-control" formControlName="requiredskills">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Job Location</label>
+                                    <input type="text" class="form-control" formControlName="joblocation">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Job Role</label>
+                                    <input type="text" class="form-control" formControlName="jobrole">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-sm-4">
+                                <div class="mb-4">
+                                    <label class="form-label">Last Date</label>
+                                    <input type="date" class="form-control" formControlName="applylastdate">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="mb-4">
+                                    <label class="form-label">Company Website</label>
+                                    <input type="text" class="form-control" formControlName="companywebsite">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center m-4">
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

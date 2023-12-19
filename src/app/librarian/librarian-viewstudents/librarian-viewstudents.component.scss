@@ -1,0 +1,16 @@
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+    &__box {
+      min-height: 60px;
+      background: #1e293b;
+      margin: 0 -1rem;
+      font-size: 20px;
+    }
+}
+mat-card{
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+}

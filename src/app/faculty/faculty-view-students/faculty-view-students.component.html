@@ -1,0 +1,57 @@
+
+<section style="background-color: #eee;">
+<div class="container py-3">
+  <div class="  p-3 mb-4 text-center font-weight-bold">
+    <h1 style="font-weight: bold;">STUDENTS</h1><hr>
+</div>
+    <div class="table-responsive">
+<table class="table table-bordered table-hover m-auto">
+    <thead class="bg-secondary">
+      <tr class="fs-6" style="padding: 20px !important;;">
+        <th>Name</th>
+        <th>Student id</th>
+        <th>Father name</th>
+        <th>Gender</th>
+        <th>Mobile no</th>
+        <th>DOB</th>
+        <th>Branch</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>
+          <div class="d-flex align-items-center">
+            <img
+                src="{{s.photo}}"
+                alt=""
+                style="width: 45px; height: 45px"
+                class="rounded-circle"
+                />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">{{s.firstname}} {{s.lastname}}</p>
+              <p class="text-muted mb-0">{{s.emailid}}</p>
+            </div>
+          </div>
+        </td>
+        <td>
+         {{s.hallticket}}
+        </td>
+        <td>
+         {{s.parentname}}
+        </td>
+        <td>{{s.gender}}</td>
+        <td>
+        {{s.mobileno}}
+        </td>
+        <td>{{s.dob}}</td>
+        <td>{{s.branch}}</td>
+   
+        <td>{{s.address}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+</div>
+</section>

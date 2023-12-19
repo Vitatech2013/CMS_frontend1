@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="text-end">
+            <span class="material-symbols-outlined close" mat-dialog-close>close</span>
+        </div>
+        <h3 class="head">Status-Report</h3>
+    </div>
+    <div class="row px-4 mt-2">
+        <div class="col-sm-3">
+            <h4 class="name"><span style="color:black">Name:-</span>{{data.studentname}}</h4>
+        </div>
+        <div class="col-sm-5">
+
+        </div>
+        <div class="col-sm-4 right">
+            <span class="details"><b>{{data.hallticket}}</b>,<br><span style="color: blueviolet;">{{data.branch}}</span>&nbsp;-Dept</span>
+        </div>
+    </div>
+
+    <div class="card title1 mt-3">
+    <div class="table-responsive px-5">
+        <table class="table mt-1">
+            <thead>
+                <tr class="tablehead">
+                    <th scope="col" class="tablehead1">S.NO</th>
+                    <th scope="col" class="tablehead2">Head of Fees</th>
+                    <th scope="col" class="tablehead3">Grant of Money(Rupees)</th>
+                    <th scope="col" class="tablehead3">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="feename">Admission Fee</td>
+                    <td class="text-center">{{data.admissionfee}}/-</td>
+                    <td>{{data.adminssionfeestatus}}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="feename">College Fee</td>
+                    <td class="text-center">{{data.collegefee}}/-</td>
+                    <td>{{data.collegefeestatus}}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="feename">Library Fee</td>
+                    <td class="text-center">{{data.libraryfee}}/-</td>
+                    <td>{{data.libraryfeestatus}}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="feename">JNTU Fee</td>
+                    <td class="text-center">{{data.jntufee}}/-</td>
+                    <td>{{data.jntufeestatus}}</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="feename">BUS Fee</td>
+                    <td class="text-center">{{data.busfee}}/-</td>
+                    <td>{{data.busfeestatus}}</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="feename">Hostel Fee</td>
+                    <td class="text-center">{{data.hostelfee}}/-</td>
+                    <td>{{data.hostelfeestatus}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+</div>

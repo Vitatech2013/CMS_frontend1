@@ -1,0 +1,80 @@
+<div>
+    <form [formGroup]="editStudentBooksform">
+        <mat-toolbar style="background: rgb(172, 172, 238);">Edit Student-Books</mat-toolbar>
+            <mat-form-field appearance="outline" class="lbform mt-4">
+                <mat-label>Librarian</mat-label>
+                <input matInput readonly formControlName="librarian">
+            </mat-form-field>
+            <div class="row">
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline" class="mdform">
+                        <mat-label>Student Hallticket</mat-label>
+                        <input matInput placeholder="Enter student hallticket no." formControlName="hallticket">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline" class="md-form">
+                        <mat-label>Student Name</mat-label>
+                        <input matInput placeholder="Enter student name" formControlName="studentname">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline" class="md-form">
+                        <mat-label>Book Name</mat-label>
+                        <input matInput placeholder="Enter Bookname" formControlName="bookname">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Author Name</mat-label>
+                        <input matInput placeholder="Enter Authorname" formControlName="author">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Student Branch</mat-label>
+                       <mat-select formControlName="branchname">
+                        <mat-option value="EEE">EEE</mat-option>
+                        <mat-option value="MECH">MECH</mat-option>
+                        <mat-option value="CSE">CSE</mat-option>
+                        <mat-option value="ECE">ECE</mat-option>
+                        <mat-option value="IT">IT</mat-option>
+                       </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input matInput placeholder="Enter Price" type="number" formControlName="price">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control mt-2" placeholder="Select a date" formControlName="date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Fine</mat-label>
+                        <input matInput placeholder="Enter Fine amount" type="number" formControlName="fine">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cleared By</mat-label>
+                        <input matInput readonly formControlName="clearedBy">
+                    </mat-form-field> 
+                </div>
+                </div>
+               
+            <div class="text-center mb-2">
+                <button mat-raised-button color="warn" class="me-2" mat-dialog-close>Cancel</button>
+                <button mat-raised-button color="primary" (click)="updateStudentBook()">update</button>
+            </div>
+        
+    </form>
+</div>

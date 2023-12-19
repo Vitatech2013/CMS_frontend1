@@ -1,0 +1,208 @@
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-pills bg-violet justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#add-placement" role="tab">Add
+                    Placements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#view-placement" role="tab">View
+                    Placements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#view-jobs" role="tab">View
+                    StudentApplied Jobs</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="add-placement">
+            <div class="row">
+                <div class="col-sm-11 m-auto">
+                    <div class="card  m-4 border-0">
+                        <div class="card-header text-center bg-warning">
+                            <span class="title">Add Company Details of Offering Placement</span>
+                        </div>
+                        <div class="card-body mt-2">
+                            <form [formGroup]="addPlacementForm" (ngSubmit)="addCompany()">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" formControlName="companyname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Company Mobile Number</label>
+                                            <input type="number" class="form-control" formControlName="mobileno">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Company Email Id</label>
+                                            <input type="email" class="form-control" formControlName="emailid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Required Skills</label>
+                                            <input type="text" class="form-control" formControlName="requiredskills">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Job Location</label>
+                                            <input type="text" class="form-control" formControlName="joblocation">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Job Role</label>
+                                            <input type="text" class="form-control" formControlName="jobrole">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-4">
+                                        <div class="mb-4">
+                                            <label class="form-label">Last Date</label>
+                                            <input type="date" class="form-control" formControlName="applylastdate">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="mb-4">
+                                            <label class="form-label">Company Website</label>
+                                            <input type="text" class="form-control" formControlName="companywebsite">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center m-4">
+                                    <button type="submit" class="btn btn-success btn-sm w-50 fw-bold">Add
+                                        Placement</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="view-placement">
+            <div class="row mt-2">
+                <div class="col-sm-12 m-auto">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                        <table class="table table-bordered table-striped mb-0">
+                            <thead class="sticky-top bg-dark text-white">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Company Name</th>
+                                    <th scope="col">Mobile Number</th>
+                                    <th scope="col">Email id</th>
+                                    <th scope="col">Job Location</th>
+                                    <th scope="col">Job Role</th>
+                                    <th scope="col">Skills</th>
+                                    <th scope="col">Last Date</th>
+                                    <th scope="col">Website</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let p of placements index as i">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{p.companyname}}</td>
+                                    <td>{{p.mobileno}}</td>
+                                    <td>{{p.emailid}}</td>
+                                    <td>{{p.joblocation}}</td>
+                                    <td>{{p.jobrole}}</td>
+                                    <td>{{p.requiredskills}}</td>
+                                    <td>{{p.applylastdate}}</td>
+                                    <td>{{p.companywebsite}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="tab-pane fade" id="view-jobs">
+            <div class="row mt-2">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4">
+                    <h3>Search Job Details By Student Hallticket Number</h3>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control-sm form-control search"  [(ngModel)]="this.SearchValue">
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-success btn-sm w-100" (click)="searchStudentJobs()">Search</button>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-12 m-auto">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                        <table class="table table-bordered table-striped mb-0">
+                            <thead class="sticky-top bg-dark text-white">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th>Name</th>
+                                    <th>Hallticket</th>
+                                    <th>Branch</th>
+                                    <th>Mobile</th>
+                                    <th>Email Id</th>
+                                    <th>Company Name</th>
+                                    <th>Job Role</th>
+                                    <th>Skills</th>
+                                    <th>status</th>
+                                    <th>interview</th>
+                                    <th>Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let j of studentJobs index as i">
+                                    <th scope="row">{{i+1}}</th>
+                                    <td>{{j.name}}</td>
+                                    <td>{{j.hallticket}}</td>
+                                    <td>{{j.branch}}</td>
+                                    <td>{{j.mobilenumber}}</td>
+                                    <td>{{j.emailid}}</td>
+                                    <td>{{j.companyname}}</td>
+                                    <td>{{j.jobrole}}</td>
+                                    <td>{{j.skills}}</td>
+                                    <td>{{j.status}}</td>
+                                    <td>{{j.interview}}</td>
+                                    <td>{{j.remarks}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

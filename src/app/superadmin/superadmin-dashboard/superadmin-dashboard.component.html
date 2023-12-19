@@ -1,0 +1,67 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+      <a routerLink="officer-home"><img class="logo" src="/assets/images/bitslogo.jpg" alt="logo"></a>
+    <mat-nav-list>
+      <a mat-list-item class="links" routerLink="superadmin-home" routerLinkActive="active"><span class="material-symbols-outlined">grid_view</span> &nbsp; Home</a>
+        <a mat-list-item class="links" routerLinkActive="active" routerLink="superadmin-viewOfficer"><span class="material-symbols-outlined">person</span> &nbsp; Officer</a>
+        <a mat-list-item class="links" routerLink="superadmin-viewStudents" routerLinkActive="active">
+          <span class="material-symbols-outlined">school</span> &nbsp; Students </a>
+      <a mat-list-item class="links" routerLink="superadmin-viewFaculty" routerLinkActive="active" >
+        <span class="material-symbols-outlined">supervisor_account</span> &nbsp; Faculty</a>
+        <a mat-list-item class="links" routerLink="superadmin-viewBooks" routerLinkActive="active">
+          <span class="material-symbols-outlined">library_books</span> &nbsp; Library</a>
+      <a mat-list-item class="links" routerLink="superadmin-viewFee" routerLinkActive="active">
+        <span class="material-symbols-outlined">currency_rupee</span> &nbsp; Fee</a>
+        <a mat-list-item class="links" routerLink="superadmin-placements" routerLinkActive="active">
+          <span class="material-symbols-outlined">webhook</span> &nbsp; Placements</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="headsection">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>BITS</span>
+      <span class="spacer"></span>
+        <!-- <button class="btn btn-primary" (click)="logout()">logout</button> -->
+        <!-- <span class="user-img">
+          <img class="rounded-circle" src="assets/images/sadminphoto1.jpg" alt="aa" width="31">
+        </span> -->
+        <div class="dropdown">
+          <a class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            id="navbarDropdownMenuAvatar"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="assets/images/sadminphoto1.jpg"
+              class="rounded-circle user-img"
+              height="45"
+              alt="IMG"
+              loading="lazy"
+             
+            />
+            &nbsp;<p class="fs-6 m-auto"> SuperAdmin</p>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end text-center"
+            aria-labelledby="navbarDropdownMenuAvatar"
+          >
+            <li>
+              <a class="dropdown-item" (click)="logout()">Account-Logout</a>
+            </li>
+          </ul>
+        </div>
+    </mat-toolbar>
+<router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

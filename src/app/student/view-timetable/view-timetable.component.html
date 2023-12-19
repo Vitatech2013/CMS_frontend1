@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <h1 class="text-center">Time-Table</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="Thead">
+                <tr>
+                    <th>Routine</th>
+                    <th>Branch</th>
+                    <th>Hour 1</th>
+                    <th>Hour 2</th>
+                    <th>Hour 3</th>
+                    <th>Hour 4</th>
+                    <th>Subject 1</th>
+                    <th>Subject 2</th>
+                    <th>Subject 3</th>
+                    <th>Faculty 1</th>
+                    <th>Faculty 2</th>
+                    <th>Faculty 3</th>
+                    <th>Lab</th>
+                    <th>Lab Assistent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of timetable ">
+                    <td>{{t.day}}</td>
+                    <td>{{t.branch}}</td>
+                    <td>{{t.hour1}}</td>
+                    <td>{{t.hour2}}</td>
+                    <td>{{t.hour3}}</td>
+                    <td>{{t.hour4}}</td>
+                    <td>{{t.subject1}}</td>
+                    <td>{{t.subject2}}</td>
+                    <td>{{t.subject3}}</td>
+                    <td>{{t.faculty1}}</td>
+                    <td>{{t.faculty2}}</td>
+                    <td>{{t.faculty3}}</td>
+                    <td>{{t.lab}}</td>
+                    <td>{{t.labasst}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>

@@ -1,0 +1,26 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      <img src="../../../assets/images/bitslogo.jpg" alt="Company Logo" width="20% " height="20%"/>
+      <span class="logo-title">BITS</span>
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+ 
+    <a mat-list-item >
+      <mat-icon>dashboard</mat-icon> Dashboard
+    </a> 
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="librarian-profile">
+      <mat-icon>home</mat-icon> Home
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="librarian-viewstudents">
+       <mat-icon>face</mat-icon> View-Students </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="librarian-addbooks"> 
+      <mat-icon>book</mat-icon> Add-Books </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="librarian-viewbooks">
+       &nbsp;<i class="bi bi-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View-Books </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="librarian-addstudentbooks">
+       &nbsp;<i class="bi bi-bookmark-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Student-Books </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="librarian-viewstudentbooks">
+       &nbsp;<i class="bi bi-journal-medical"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View Student-Books </a>
+  </mat-nav-list>

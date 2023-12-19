@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <span class="text-end close" mat-dialog-close>x</span>
+    </div>
+    <div class="row mt-1">
+        <div class="text-start">
+            <h2 class="generaldetails">General-Details</h2>
+        </div>
+        <div class="col-sm-4">
+            <img src="{{data.photo}}" width="80%" height="60%" style="border-radius: 5px;">
+        </div>
+        <div class="col-sm-8 px-3">
+            <div class="row">
+                <div class="col-sm-6"><b>Address :--</b></div>
+                <div class="col-sm-6">{{data.address}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>City :--</b></div>
+                <div class="col-sm-6">{{data.city}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>State :--</b></div>
+                <div class="col-sm-6">{{data.state}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Pincode :--</b></div>
+                <div class="col-sm-6">{{data.pincode}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-0">
+        <div class="text-start">
+            <h2 class="generaldetails">Bank-Details</h2>
+        </div>
+        <div class="col-sm-4">
+            <img src="{{data.aadharcopy}}" width="80%" height="90%">
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6"><b>BankName :--</b></div>
+                <div class="col-sm-6">{{data.bankname}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Branch Name :--</b></div>
+                <div class="col-sm-6">{{data.branchname}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>A/C no :--</b></div>
+                <div class="col-sm-6">{{data.bankaccountno}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>IFSC Code :--</b></div>
+                <div class="col-sm-6">{{data.ifsccode}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Pancardno :--</b></div>
+                <div class="col-sm-6">{{data.pancardno}}</div>
+            </div>
+        </div>
+    </div>
+</div>

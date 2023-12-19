@@ -1,0 +1,26 @@
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+    &__box {
+      min-height: 60px;
+      background: #1e293b;
+      margin: 0 -1rem;
+      font-size: 20px;
+    }
+}
+mat-card{
+    width: 60%;
+    margin: auto;
+    margin-top: 2.5%;
+    background: rgb(221, 227, 238);
+}
+mat-form-field{
+    width: 60%;
+    margin: auto;
+    margin-left: 20%;
+}
+h2{
+    text-align: center;
+    color: rgb(59, 59, 207);
+}

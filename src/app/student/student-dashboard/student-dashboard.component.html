@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <a  routerLink="view-profile" ><img src="../../../assets/images/bitslogo.jpg" class="c-logo"></a>
+    <mat-nav-list>
+      <a mat-list-item class="list" routerLink="view-timetable" routerLinkActive="active">Time-Table</a>
+      <a mat-list-item class="list" routerLink="view-marks" routerLinkActive="active">Marks</a>
+      <a mat-list-item class="list" routerLink="view-fee" routerLinkActive="active">Fees</a>
+      <a mat-list-item class="list" routerLink="view-books" routerLinkActive="active">Library Books</a>
+      <a mat-list-item class="list" routerLink="view-profile" routerLinkActive="active">Profile</a>
+      <a mat-list-item class="list" routerLink="student-placement" routerLinkActive="active">Placements</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="c-name">BITS</span>
+      <span style="flex: 1 1 auto;"></span>
+      <div>
+        <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

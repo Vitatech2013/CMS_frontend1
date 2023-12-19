@@ -1,0 +1,34 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">View Added-Books</div>
+    </div>
+<mat-card>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-primary">
+                <th scope="col">S.No</th>
+                <th scope="col">BookName</th>
+                <th scope="col">Author</th>
+                <th scope="col">Department</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr *ngFor="let B of books index as i">
+                <th>{{i+1}}</th>
+                <th>{{B.bookname}}</th>
+                <th>{{B.author}}</th>
+                <th>{{B.department}}</th>
+                <th>{{B.price}}</th>
+                <th>{{B.quantity}}</th>
+                <th>
+                    <button mat-icon-button color="primary" (click)="editbooks(B)"><mat-icon>edit</mat-icon></button>
+                    <button mat-icon-button color="warn" (click)="deletebook(B)"><mat-icon>delete</mat-icon></button>
+                </th>
+             </tr>
+            </tbody>
+          </table>
+    </div>
+</mat-card>

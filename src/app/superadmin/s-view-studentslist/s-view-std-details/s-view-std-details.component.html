@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <span class="text-end close" mat-dialog-close>x</span>
+        <span class="details">Details</span>
+    </div>
+    <!-- {{data | json}} -->
+    <div class="row mt-3">
+        <div class="col-sm-6">
+            <b>{{data.firstname}}{{data.lastname}}</b><br>
+            {{data.hallticket}},<br>
+            {{data.mobileno}},<br>
+            {{data.emailid}}
+        </div>
+    </div>
+    <div class="row mt-1">
+        <h4 class="GD">StudentDetails :-</h4>
+    </div>
+    <div class="row mt-1">
+        <div class="col-sm-6">
+            <img src="{{data.photo}}" alt="photo" width="60%" height="70%" style="border-radius: 5px;">
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6"><b>Eamcet RanK :-</b></div>
+                <div class="col-sm-6">{{data.eamcetrank}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Branch :-</b></div>
+                <div class="col-sm-6">{{data.branch}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Gender :-</b></div>
+                <div class="col-sm-6">{{data.gender}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Date of Birth :-</b></div>
+                <div class="col-sm-6">{{data.dob}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Religion :-</b></div>
+                <div class="col-sm-6">{{data.religion}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Caste :-</b></div>
+                <div class="col-sm-6">{{data.caste}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Address :-</b></div>
+                <div class="col-sm-6">{{data.address}},<br>
+                                      {{data.city}},<br>
+                                      {{data.state}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-2">
+        <h4 class="GD">ParentDetails :-</h4>
+    </div>
+    <div class="row mt-0">
+        <div class="col-sm-6">
+            <img src="{{data.aadharcopy}}" alt="aadharphoto" width="60%" height="90%" >
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6"><b>ParentName :-</b></div>
+                <div class="col-sm-6">{{data.parentname}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>Profession :-</b></div>
+                <div class="col-sm-6">{{data.parentprofession}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>ParentMobileno :-</b></div>
+                <div class="col-sm-6">{{data.parentsmobileno}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><b>FamilyIncome :-</b></div>
+                <div class="col-sm-6">{{data.familyincome}}</div>
+            </div>
+        </div>
+    </div>
+</div>

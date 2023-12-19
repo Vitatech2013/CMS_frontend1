@@ -1,0 +1,214 @@
+<h1>Student Profile</h1>
+
+<section style="background-color: #bfc7c8;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="card mb-5" style="background-color: whitesmoke;">
+          <div class="card-body text-center">
+            <img src="{{student.photo}}" alt="Student Photo"
+              class="rounded-circle img-fluid" style="width: 150px;">
+            <h3 class="my-3">{{student.firstname}}&nbsp;{{student.lastname}}</h3>
+            <button class="btn btn-primary" (click)="edit()">Edit Profile</button>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="card mb-5" style="background-color: whitesmoke;">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Full Name </p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start" >{{student.firstname}}&nbsp;{{student.lastname}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Gender </p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.gender}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Date of Birth</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.dob}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Mobile</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.mobileno}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Address</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.address}},{{student.city}},{{student.state}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Parent Profession</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.parentprofession}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Family income</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.familyincome}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Adhaar Copy</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.aadharcopy}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Allotmentorder</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.allotmentorder}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Admission Fee</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.adminssionfee}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Email Id</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.emailid}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Religion</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.religion}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Hallticket No.</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.hallticket}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Caste</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.caste}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Emcet Rank</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.eamcetrank}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Emcet Rank</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.parentname}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Parent Mobileno.</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.parentsmobileno}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Branch</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.branch}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Type of Student</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.typeofStudent}}</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p class="mb-0">Status</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <p class="text-muted mb-0 text-start">{{student.status}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

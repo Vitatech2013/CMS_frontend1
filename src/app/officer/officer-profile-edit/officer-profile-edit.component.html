@@ -1,0 +1,158 @@
+<div class="row g-0">
+    <div class="col-sm-12">
+        <div class="" mat-dialog-close="true">
+            <h3 class="text-center">Edit And Update Your Profile Details<span
+                    class="ic"><mat-icon>close</mat-icon></span> </h3>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="editProfileForm" (ngSubmit)="editProfile()">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="row mb-3">
+                                <div class="col-sm-4">
+                                    <label>Emplyoee Name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>EmailId<span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" formControlName="emailid">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Mobileno<span class="text-danger">*</span></label>
+                                    <input type="mobile" class="form-control" formControlName="mobileno">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4">
+                                    <label>Gender<span class="text-danger">*</span></label>
+                                    <select class="form-select form-select-md" aria-label=".form-select-sm example"
+                                        formControlName="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Date Of Birth<span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" formControlName="dob">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label>Joining Date<span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" formControlName="joiningdate">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4">
+                                    <label>Qualification<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="qualification">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Experience<span class="text-danger">*</span></label>
+                                    <input type="mobile" class="form-control" formControlName="yearofexperience">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>EmployeeType<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="typeofemployee">
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+
+                                <div class="col-sm-4">
+                                    <label>Designation<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="designation">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Department<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="department">
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label>Salary<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="salary">
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <label>Address<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="address">
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-sm-4">
+                                    <label>City<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="city">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>State<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" formControlName="state">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Pincode<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" formControlName="pincode">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="p-1">
+                                    <h2 class="head1">Bank Details</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-2">
+                                        <div class="col-sm-6">
+                                            <label>BankName<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" formControlName="bankname">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label>BranchName<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" formControlName="branchname">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-sm-12">
+                                            <label>A/C no<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" formControlName="bankaccountno">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-sm-6">
+                                            <label>IFSC Code<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" formControlName="ifsccode">
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label>Pancardno<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" formControlName="pancardno">
+                                        </div>
+
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-sm-12">
+                                            <label>Photo<span class="text-danger">*</span></label>
+                                            <input type="file" accept="image/*" class="form-control"
+                                                formControlName="photo" (change)="onSelectFile($event)">
+                                        </div>
+
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12">
+                                            <label>AdharCopy<span class="text-danger">*</span></label>
+                                            <input type="file" accept="image/*" class="form-control"
+                                                formControlName="aadharcopy" (change)="onSelectAadharFile($event)">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 text-center">
+                        <button class="btn" type="submit">Update Your Profile Details</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
